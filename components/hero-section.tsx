@@ -13,6 +13,15 @@ export function HeroSection() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2 space-y-6">
             <div>
+              <div className="relative mb-5 h-28 w-28 overflow-hidden rounded-full border-4 border-white shadow-xl dark:border-gray-800">
+                <Image
+                  src="/images/talha.jpg"
+                  alt="Muhammad Talha Khan"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
               <AnimatedText text="Muhammad Talha Khan" className="text-4xl md:text-5xl font-bold tracking-tight" />
               <AnimatedText
                 text="Embedded Systems & Edge AI Engineer"
@@ -48,7 +57,7 @@ export function HeroSection() {
                 </Link>
               </Button>
               <Button variant="secondary" asChild className="relative overflow-hidden group">
-                <Link href="/documents/muhammad-talha-khan-resume.pdf" target="_blank" download>
+                <Link href="/documents/mtalha-khan-resume.pdf" target="_blank" download>
                   <Download className="w-4 h-4 mr-2" />
                   <span className="relative z-10">Resume</span>
                   <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
@@ -90,22 +99,6 @@ export function HeroSection() {
               </Link>
             </ClientMotion>
           </div>
-          <ClientMotion
-            className="w-full md:w-1/2 flex justify-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              type: "spring",
-              stiffness: 100,
-            }}
-          >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
-              <Image src="/images/talha.jpg" alt="Muhammad Talha Khan" fill className="object-cover" priority />
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-blue-600/20 mix-blend-overlay" />
-            </div>
-          </ClientMotion>
         </div>
 
         <ClientMotion
