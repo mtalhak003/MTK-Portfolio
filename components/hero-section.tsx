@@ -48,7 +48,7 @@ export function HeroSection() {
                 </Link>
               </Button>
               <Button variant="secondary" asChild className="relative overflow-hidden group">
-                <Link href="/documents/muhammad-murad-resume.pdf" target="_blank" download>
+                <Link href="/documents/muhammad-talha-khan-resume.pdf" target="_blank" download>
                   <Download className="w-4 h-4 mr-2" />
                   <span className="relative z-10">Resume</span>
                   <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
