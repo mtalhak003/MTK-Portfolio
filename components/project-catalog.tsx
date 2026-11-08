@@ -1,6 +1,6 @@
 "use client"
 import { useMemo, useState } from "react"
-import { ArrowUpRight, Github, Search } from "lucide-react"
+import { ArrowUpRight, Github, Search, Layers, Cpu, Sparkles, ChevronDown, RotateCcw, ArrowRight, Code2, Target } from "lucide-react"
 
 type Project = {
   title: string
@@ -50,66 +50,219 @@ const categories = [
   "Games & Interactive",
 ]
 
+
+const projectDetails: Record<string, { challenge: string; approach: string; highlights: string[] }> = {
+  "FIRMAVEX": {
+    challenge: "Verifying firmware across architectures and tracing failures consistently can require several disconnected tools.",
+    approach: "Unifies emulation, debugging, HDL simulation, and automated verification into a reproducible desktop workflow.",
+    highlights: ["ARM Cortex-M3 and RISC-V execution support", "QEMU and GDB integration", "Icarus Verilog simulation and repeatable tests"],
+  },
+  "LeafPulse — AIoT Smart Greenhouse": {
+    challenge: "Greenhouse monitoring and environmental control involve sensor data, edge processing, and actuator responses.",
+    approach: "Combines microcontroller sensor nodes with a Raspberry Pi-based processing and control system.",
+    highlights: ["ESP32 environmental sensing", "Raspberry Pi 4 edge processing", "Automated greenhouse climate and irrigation control"],
+  },
+  "YOLOv8 Weed Detection": {
+    challenge: "Identifying weeds in agricultural imagery is a computer-vision problem with real-world variability.",
+    approach: "Uses a custom-trained Ultralytics YOLOv8 object-detection model for agricultural weed identification.",
+    highlights: ["Custom object-detection training", "Agricultural image analysis", "Potential precision-agriculture applications"],
+  },
+  "CROSS-OS BRIDGE": {
+    challenge: "Multiple connected clients must share limited resources without losing control of server behavior.",
+    approach: "Implements a socket-based client–server design with concurrent request handling, resource coordination, and termination signaling.",
+    highlights: ["Concurrent client connections", "Tutor and chair resource management", "Controlled server termination"],
+  },
+  "EduPort — Online Learning Platform": {
+    challenge: "Learners need an accessible interface for exploring courses across several disciplines.",
+    approach: "Presents a course catalog supporting different subjects and free or premium course offerings.",
+    highlights: ["Multi-category course discovery", "Free and paid course offerings", "Education-focused web interface"],
+  },
+  "Home IoT Server — Cisco Packet Tracer": {
+    challenge: "Connecting and controlling multiple smart-home devices requires coordinated networking and monitoring.",
+    approach: "Simulates connected home devices and centralized control using Cisco Packet Tracer.",
+    highlights: ["Central IoT server connectivity", "Device monitoring dashboard", "Automated lighting and sensor feedback"],
+  },
+}
+
+const categoryGradient: Record<string, string> = {
+  "Embedded & Firmware": "from-violet-600 to-indigo-800",
+  "AI & Machine Learning": "from-fuchsia-600 to-purple-800",
+  "Software Engineering": "from-sky-600 to-blue-800",
+  "Web & Full-Stack": "from-teal-600 to-cyan-800",
+  "IoT & Automation": "from-emerald-600 to-teal-800",
+  "Games & Interactive": "from-orange-600 to-rose-800",
+}
+
 export function ProjectCatalog() {
   const [category, setCategory] = useState("All Projects")
   const [search, setSearch] = useState("")
+  const [sortBy, setSortBy] = useState("featured")
+  const [featuredOnly, setFeaturedOnly] = useState(false)
+  const [visibleCount, setVisibleCount] = useState(8)
+
   const filtered = useMemo(() => {
     const query = search.toLowerCase().trim()
-    return projects.filter((project) =>
+    const result = projects.filter((project) =>
       (category === "All Projects" || project.category === category) &&
+      (!featuredOnly || project.featured) &&
       (!query || [project.title, project.description, project.category, ...project.stack].join(" ").toLowerCase().includes(query))
-    ).sort((a, b) => Number(b.featured) - Number(a.featured) || a.title.localeCompare(b.title))
-  }, [category, search])
+    )
+    return result.sort((a, b) => sortBy === "alphabetical"
+      ? a.title.localeCompare(b.title)
+      : sortBy === "category"
+        ? a.category.localeCompare(b.category) || a.title.localeCompare(b.title)
+        : Number(b.featured) - Number(a.featured) || a.title.localeCompare(b.title))
+  }, [category, search, sortBy, featuredOnly])
+
+  const clearFilters = () => {
+    setCategory("All Projects")
+    setSearch("")
+    setSortBy("featured")
+    setFeaturedOnly(false)
+    setVisibleCount(8)
+  }
+  const featuredProjects = projects.filter(p => p.featured).slice(0, 3)
+  const activeFilters = category !== "All Projects" || search !== "" || featuredOnly || sortBy !== "featured"
+
   return (
-    <section id="projects" className="relative bg-white px-4 py-20 dark:bg-gray-800">
+    <section id="projects" className="relative overflow-hidden bg-white px-4 py-20 dark:bg-gray-800">
       <div className="container relative z-10 mx-auto max-w-6xl">
-        <div className="mx-auto mb-10 max-w-3xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-purple-600 dark:text-purple-400">Selected work & complete archive</p>
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">Engineering Projects</h2>
-          <p className="text-gray-600 dark:text-gray-300">Explore embedded firmware, intelligent systems, software engineering, full-stack applications, and interactive development. Each entry describes its purpose and documented tools.</p>
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-purple-600 dark:text-purple-400">Designed • Built • Tested</p>
+          <h2 className="mb-4 text-3xl font-bold md:text-5xl">Projects & Engineering Work</h2>
+          <p className="mx-auto max-w-2xl text-gray-600 dark:text-gray-300">From firmware verification and edge intelligence to distributed software and web applications. Discover the engineering challenges, approaches, and technologies behind my work.</p>
         </div>
-        <div className="mb-7 flex flex-wrap gap-2" role="group" aria-label="Filter projects by category">
-          {categories.map((item) => (
-            <button key={item} onClick={() => setCategory(item)} aria-pressed={category === item}
-              className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 ${category === item ? "border-purple-600 bg-purple-600 text-white" : "border-gray-300 bg-white text-gray-700 hover:border-purple-500 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200"}`}>
-              {item}
-            </button>
-          ))}
+
+        <div className="mb-12 grid gap-4 sm:grid-cols-3">
+          <div className="rounded-2xl border border-purple-200 bg-purple-50 p-5 dark:border-purple-900 dark:bg-purple-950/40">
+            <Layers className="mb-4 h-6 w-6 text-purple-600 dark:text-purple-400" />
+            <p className="text-3xl font-bold">{projects.length}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">Projects showcased</p>
+          </div>
+          <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5 dark:border-sky-900 dark:bg-sky-950/30">
+            <Cpu className="mb-4 h-6 w-6 text-sky-600 dark:text-sky-400" />
+            <p className="text-3xl font-bold">{categories.length - 1}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">Engineering disciplines</p>
+          </div>
+          <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 dark:border-emerald-900 dark:bg-emerald-950/30">
+            <Code2 className="mb-4 h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+            <p className="text-3xl font-bold">{projects.filter(p => p.github).length}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">Linked source repositories</p>
+          </div>
         </div>
-        <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <label className="relative block w-full sm:max-w-md">
-            <Search aria-hidden="true" className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
-            <span className="sr-only">Search projects and technologies</span>
-            <input type="search" value={search} onChange={(event) => setSearch(event.target.value)}
-              placeholder="Search projects, languages or tools..."
-              className="w-full rounded-lg border border-gray-300 bg-white py-3 pl-10 pr-3 text-sm text-gray-900 outline-none focus:border-purple-500 dark:border-gray-600 dark:bg-gray-900 dark:text-white" />
-          </label>
-          <p role="status" className="text-sm text-gray-500 dark:text-gray-400">{filtered.length} {filtered.length === 1 ? "project" : "projects"} shown</p>
+
+        <div className="mb-14">
+          <div className="mb-5 flex items-center gap-2">
+            <Sparkles className="h-5 w-5 text-purple-600" />
+            <h3 className="text-2xl font-bold">Featured Engineering Work</h3>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {featuredProjects.map((project, index) => (
+              <a key={project.title} href={"#project-gallery"} onClick={() => { setCategory(project.category); setSearch(project.title); setFeaturedOnly(false); setVisibleCount(8) }}
+                className={\`group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br p-6 text-white shadow-lg transition-transform hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 \${categoryGradient[project.category] || "from-violet-600 to-blue-800"}\`}>
+                <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full border border-white/20 bg-white/10" />
+                <div className="relative z-10 flex items-center justify-between">
+                  <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-medium">Featured 0{index + 1}</span>
+                  <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </div>
+                <div className="relative z-10">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-white/75">{project.category}</p>
+                  <h4 className="mb-2 text-xl font-bold">{project.title}</h4>
+                  <p className="line-clamp-2 text-sm text-white/85">{project.description}</p>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {filtered.map((project) => (
-            <article key={project.title} className="flex h-full flex-col rounded-xl border border-gray-200 bg-gray-50 p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-gray-700 dark:bg-gray-900">
-              <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-                <span className="text-xs font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400">{project.category}</span>
-                <span className="rounded-full border border-gray-300 px-2.5 py-1 text-xs text-gray-600 dark:border-gray-600 dark:text-gray-300">{project.status}</span>
-              </div>
-              <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">{project.title}</h3>
-              <p className="mb-5 flex-1 leading-relaxed text-gray-600 dark:text-gray-300">{project.description}</p>
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Languages, frameworks & tools</p>
-              <div className="mb-6 flex flex-wrap gap-2">
-                {project.stack.map((tech) => <span key={tech} className="rounded-md bg-purple-100 px-2.5 py-1 text-xs font-medium text-purple-800 dark:bg-purple-950 dark:text-purple-200">{tech}</span>)}
-              </div>
-              {project.github ? (
-                <a href={project.github} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-2 font-medium text-purple-700 hover:underline dark:text-purple-300">
-                  <Github className="h-4 w-4" /> GitHub repository <ArrowUpRight className="h-4 w-4" />
-                </a>
-              ) : <span className="text-sm text-gray-500 dark:text-gray-400">Repository link not publicly available</span>}
-            </article>
-          ))}
+
+        <div id="project-gallery" className="scroll-mt-24">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="mb-1 text-sm font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400">Explore the portfolio</p>
+              <h3 className="text-2xl font-bold">All Project Details</h3>
+            </div>
+            {activeFilters && <button onClick={clearFilters} className="inline-flex items-center gap-2 text-sm font-medium text-purple-700 hover:underline dark:text-purple-300"><RotateCcw className="h-4 w-4" /> Reset filters</button>}
+          </div>
+          <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Filter projects by category">
+            {categories.map((item) => {
+              const count = item === "All Projects" ? projects.length : projects.filter(p => p.category === item).length
+              return (
+                <button key={item} onClick={() => { setCategory(item); setVisibleCount(8) }} aria-pressed={category === item}
+                  className={\`rounded-full border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 \${category === item ? "border-purple-600 bg-purple-600 text-white" : "border-gray-300 bg-white text-gray-700 hover:border-purple-500 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200"}\`}>
+                  {item} <span className={category === item ? "ml-1 text-white/75" : "ml-1 text-gray-400"}>{count}</span>
+                </button>
+              )
+            })}
+          </div>
+
+          <div className="mb-7 grid gap-3 md:grid-cols-[minmax(0,1fr)_auto_auto] md:items-center">
+            <label className="relative block">
+              <Search aria-hidden="true" className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
+              <span className="sr-only">Search projects and technologies</span>
+              <input type="search" value={search} onChange={e => { setSearch(e.target.value); setVisibleCount(8) }} placeholder="Search project, language, framework..."
+                className="w-full rounded-lg border border-gray-300 bg-white py-3 pl-10 pr-3 text-sm text-gray-900 outline-none focus:border-purple-500 dark:border-gray-600 dark:bg-gray-900 dark:text-white" />
+            </label>
+            <label className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-3 text-sm dark:border-gray-600">
+              <input type="checkbox" checked={featuredOnly} onChange={e => { setFeaturedOnly(e.target.checked); setVisibleCount(8) }} className="accent-purple-600" />
+              Featured only
+            </label>
+            <label className="flex items-center gap-2 text-sm">
+              <span className="sr-only">Sort projects</span>
+              <select aria-label="Sort projects" value={sortBy} onChange={e => setSortBy(e.target.value)}
+                className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 dark:border-gray-600 dark:bg-gray-900">
+                <option value="featured">Featured first</option>
+                <option value="alphabetical">Name A–Z</option>
+                <option value="category">Category</option>
+              </select>
+            </label>
+          </div>
+
+          <p role="status" aria-live="polite" className="mb-5 text-sm text-gray-500 dark:text-gray-400">Showing {Math.min(filtered.length, visibleCount)} of {filtered.length} matching projects</p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {filtered.slice(0, visibleCount).map(project => (
+              <article key={project.title} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:border-gray-700 dark:bg-gray-900">
+                <div className={\`relative h-24 overflow-hidden bg-gradient-to-r \${categoryGradient[project.category] || "from-purple-600 to-blue-600"}\`}>
+                  <div className="absolute -right-8 -top-12 h-36 w-36 rounded-full border border-white/20 bg-white/10" />
+                  <div className="absolute bottom-4 left-6 flex items-center gap-2 text-sm font-semibold text-white">
+                    <span className="rounded-md bg-white/20 px-3 py-1">{project.category}</span>
+                  </div>
+                  {project.featured && <span className="absolute right-4 top-4 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white">★ Featured</span>}
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="mb-3 flex items-start justify-between gap-3">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white">{project.title}</h4>
+                    <span className="shrink-0 rounded-full border border-gray-300 px-2 py-1 text-xs text-gray-600 dark:border-gray-600 dark:text-gray-300">{project.status}</span>
+                  </div>
+                  <p className="mb-5 leading-relaxed text-gray-600 dark:text-gray-300">{project.description}</p>
+                  <div className="mb-5 mt-auto">
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Tech stack</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.stack.map(tech => <span key={tech} className="rounded-md bg-purple-100 px-2.5 py-1 text-xs font-medium text-purple-800 dark:bg-purple-950 dark:text-purple-200">{tech}</span>)}
+                    </div>
+                  </div>
+                  {projectDetails[project.title] && (
+                    <details className="mb-5 rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-4 text-sm font-semibold text-gray-900 dark:text-white">
+                        <span className="inline-flex items-center gap-2"><Target className="h-4 w-4 text-purple-600" /> Engineering breakdown</span>
+                        <ChevronDown className="h-4 w-4" />
+                      </summary>
+                      <div className="space-y-3 border-t border-gray-200 p-4 text-sm text-gray-600 dark:border-gray-700 dark:text-gray-300">
+                        <div><p className="mb-1 font-semibold text-gray-900 dark:text-white">Challenge</p><p>{projectDetails[project.title].challenge}</p></div>
+                        <div><p className="mb-1 font-semibold text-gray-900 dark:text-white">Approach</p><p>{projectDetails[project.title].approach}</p></div>
+                        <div><p className="mb-1 font-semibold text-gray-900 dark:text-white">Highlights</p><ul className="list-inside list-disc space-y-1">{projectDetails[project.title].highlights.map(h => <li key={h}>{h}</li>)}</ul></div>
+                      </div>
+                    </details>
+                  )}
+                  {project.github ? <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 font-semibold text-purple-700 hover:underline dark:text-purple-300"><Github className="h-4 w-4" /> Explore source code <ArrowUpRight className="h-4 w-4" /></a>
+                  : <span className="text-sm text-gray-500 dark:text-gray-400">Public source link unavailable</span>}
+                </div>
+              </article>
+            ))}
+          </div>
+          {filtered.length === 0 && <div className="rounded-2xl border border-dashed border-gray-300 py-12 text-center dark:border-gray-600"><Search className="mx-auto mb-3 h-6 w-6 text-gray-400" /><p className="mb-3 text-gray-500">No matching projects found.</p><button className="font-semibold text-purple-700 dark:text-purple-300" onClick={clearFilters}>Clear filters</button></div>}
+          {filtered.length > visibleCount && <div className="mt-10 text-center"><button onClick={() => setVisibleCount(n => n + 8)} className="inline-flex items-center gap-2 rounded-xl bg-purple-600 px-7 py-3 font-semibold text-white transition-colors hover:bg-purple-700">Load more projects <ArrowRight className="h-4 w-4" /></button></div>}
         </div>
-        {filtered.length === 0 && <p className="py-12 text-center text-gray-500">No matching projects. Try a different category or keyword.</p>}
-        <p className="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">Some repositories contain coursework or early-stage experiments. Technology tags reflect the available project descriptions; additional implementation details can be added as documentation improves.</p>
+        <p className="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">Descriptions and technology labels are based on available project documentation. Technical details can be expanded as repositories are updated.</p>
       </div>
     </section>
   )
