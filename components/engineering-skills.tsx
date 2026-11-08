@@ -4,9 +4,9 @@ import type { LucideIcon } from "lucide-react"
 type SkillGroup = { title: string; icon: LucideIcon; description: string; skills: string[] }
 
 const stack = [
-  { title: "Hardware Verification", subtitle: "Simulation · validation · debugging", icon: CircuitBoard },
-  { title: "Digital Design & RTL", subtitle: "HDL · FPGA · pipelined architectures", icon: Binary },
-  { title: "Embedded Firmware (C/C++)", subtitle: "MCUs · interfaces · peripheral control", icon: Cpu },
+  { title: "Hardware & Firmware", subtitle: "Embedded systems · digital design · verification", icon: Cpu },
+  { title: "Web Development", subtitle: "Frontend · backend · APIs & databases", icon: Globe2 },
+  { title: "AI & Machine Learning", subtitle: "Computer vision · edge inference · model development", icon: BrainCircuit },
 ]
 
 const skillGroups: SkillGroup[] = [
@@ -75,7 +75,7 @@ export function EngineeringSkills() {
         <div className="mb-10">
           <p className="mb-3 flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[.2em] text-cyan-300"><Layers3 className="h-4 w-4" /> Engineering capabilities</p>
           <h2 className="text-3xl font-bold text-white sm:text-4xl">Technical Stack</h2>
-          <p className="mt-3 max-w-2xl leading-7 text-slate-300">Core engineering disciplines across RTL, FPGA workflows, and embedded firmware.</p>
+          <p className="mt-3 max-w-2xl leading-7 text-slate-300">My core areas of work: hardware and firmware engineering, full-stack web development, and AI/ML.</p>
         </div>
 
         <div className="mb-20 grid gap-4 md:grid-cols-3">
