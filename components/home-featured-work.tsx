@@ -54,7 +54,7 @@ export function HomeFeaturedWork() {
             <h2 className="text-3xl font-bold md:text-5xl">Featured Projects</h2>
             <p className="mt-4 max-w-xl leading-7 text-slate-300">Three projects that represent my focus on firmware, embedded intelligence, and applied computer vision.</p>
           </div>
-          <Link href="/about#projects" className="inline-flex w-fit items-center gap-2 rounded-xl border border-cyan-300/30 px-5 py-3 font-semibold text-cyan-300 transition hover:bg-cyan-300/10">
+          <Link href="/work" className="inline-flex w-fit items-center gap-2 rounded-xl border border-cyan-300/30 px-5 py-3 font-semibold text-cyan-300 transition hover:bg-cyan-300/10">
             All projects <ArrowUpRight className="h-4 w-4"/>
           </Link>
         </div>
@@ -82,7 +82,7 @@ export function HomeFeaturedWork() {
                     {project.stack.map(tech => <span key={tech} className="rounded-md border border-slate-600/70 bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-200">{tech}</span>)}
                   </div>
                   <div className="flex flex-wrap gap-4 text-sm font-semibold">
-                    <Link href="/about#projects" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">Technical details <ArrowRight className="h-4 w-4"/></Link>
+                    <Link href="/work" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">Technical details <ArrowRight className="h-4 w-4"/></Link>
                     {project.github && <a href={project.github} rel="noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 text-slate-200 hover:text-white"><Github className="h-4 w-4"/> GitHub <ArrowUpRight className="h-4 w-4"/></a>}
                   </div>
                 </div>
