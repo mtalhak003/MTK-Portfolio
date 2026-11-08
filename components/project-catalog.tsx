@@ -41,13 +41,13 @@ const projects: Project[] = [
 ]
 
 const categories = [
-  "All Projects",
   "Embedded & Firmware",
   "AI & Machine Learning",
   "Software Engineering",
   "Web & Full-Stack",
   "IoT & Automation",
   "Games & Interactive",
+  "All Projects",
 ]
 
 
@@ -94,7 +94,7 @@ const categoryGradient: Record<string, string> = {
 }
 
 export function ProjectCatalog() {
-  const [category, setCategory] = useState("All Projects")
+  const [category, setCategory] = useState("Embedded & Firmware")
   const [search, setSearch] = useState("")
   const [sortBy, setSortBy] = useState("featured")
   const [featuredOnly, setFeaturedOnly] = useState(false)
@@ -115,7 +115,7 @@ export function ProjectCatalog() {
   }, [category, search, sortBy, featuredOnly])
 
   const clearFilters = () => {
-    setCategory("All Projects")
+    setCategory("Embedded & Firmware")
     setSearch("")
     setSortBy("featured")
     setFeaturedOnly(false)
