@@ -1,10 +1,9 @@
-import { ProjectCatalog } from "@/components/project-catalog"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Navbar } from "@/components/navbar"
-import { AnimatedSection, AnimatedGradientBackground } from "@/components/client-animations"
+import { AnimatedSection } from "@/components/client-animations"
 
 export default function AboutPage() {
   return (
@@ -13,8 +12,8 @@ export default function AboutPage() {
       <header className="relative overflow-hidden bg-[#091428] px-4 pb-16 pt-32 text-white">
         <div className="container mx-auto max-w-6xl">
           <p className="mb-3 font-mono text-sm uppercase tracking-[.2em] text-cyan-300">Engineering background</p>
-          <h1 className="mb-5 text-4xl font-bold md:text-5xl">About, Experience & Projects</h1>
-          <p className="max-w-2xl leading-8 text-slate-300">Explore my professional journey, embedded systems and AI experience, technical skills, education, and detailed project portfolio.</p>
+          <h1 className="mb-5 text-4xl font-bold md:text-5xl">About Me & Engineering Background</h1>
+          <p className="max-w-2xl leading-8 text-slate-300">My professional experience, embedded systems expertise, technical skills, education, and achievements.</p>
           <nav aria-label="About page sections" className="mt-7 flex flex-wrap gap-3 text-sm">
             <a className="rounded-full border border-cyan-400/30 px-4 py-2 hover:bg-[#102139]/10" href="#about">About Me</a>
             <a className="rounded-full border border-cyan-400/30 px-4 py-2 hover:bg-[#102139]/10" href="#experience">Experience</a>
@@ -124,9 +123,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Categorized portfolio projects */}
-      <ProjectCatalog />
 
       {/* Skills Section */}
       <section id="skills" className="py-16 px-4 bg-[#091426] relative">
