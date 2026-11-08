@@ -1,19 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowUpRight, Cpu, Github, Linkedin, Mail, CalendarDays, FileText, Terminal, Zap, CircuitBoard, Radio } from "lucide-react"
+import { ArrowUpRight, Github, Linkedin, Mail, CalendarDays, FileText, Terminal, Zap, CircuitBoard, Radio } from "lucide-react"
 import { motion } from "framer-motion"
-
-const signals = [
-  "M0 90 H150 V165 H325 V105 H490 V180 H720 V95 H900",
-  "M0 215 H100 V265 H270 V205 H465 V290 H690 V235 H900",
-  "M0 350 H190 V315 H365 V380 H545 V320 H745 V365 H900",
-  "M0 465 H130 V420 H285 V495 H470 V435 H665 V490 H900",
-]
-const nodes = [
-  [150,165],[325,105],[490,180],[100,265],[270,205],[465,290],
-  [190,315],[365,380],[545,320],[130,420],[285,495],[665,490]
-]
 
 export function HeroSection() {
   return (
@@ -55,31 +44,19 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, scale: .94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, delay: .15 }}
-          className="relative mx-auto w-full max-w-[520px]" aria-label="Animated embedded circuit diagram">
-          <div className="relative aspect-square overflow-hidden rounded-[2rem] border border-cyan-300/15 bg-gradient-to-br from-[#101d35] via-[#0b162a] to-[#090e1d] shadow-[0_0_100px_rgba(34,211,238,.08)]">
-            <svg className="absolute inset-0 h-full w-full" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid meet" fill="none" aria-hidden="true">
-              {signals.map((line, i) => (
-                <g key={i}>
-                  <path d={line} stroke="#0e7490" strokeWidth="2.5" opacity=".5" />
-                  <path d={line} stroke="#67e8f9" strokeWidth="3" strokeLinecap="round" pathLength="100"
-                    strokeDasharray="7 93" className="circuit-signal"
-                    style={{ animationDelay: `-${i * 1.1}s`, animationDuration: `${5+i * .8}s` }} />
-                </g>
-              ))}
-              {nodes.map(([x,y],i) => <circle key={i} cx={x} cy={y} r="5" fill="#67e8f9" opacity=".8" />)}
-              <circle cx="455" cy="300" r="148" stroke="#22d3ee" opacity=".09" />
-              <circle cx="455" cy="300" r="185" stroke="#22d3ee" opacity=".07" />
-            </svg>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative flex h-44 w-44 flex-col items-center justify-center rounded-3xl border border-cyan-300/50 bg-[#0a1b2b]/95 shadow-[0_0_65px_rgba(34,211,238,.2)] sm:h-52 sm:w-52">
-                <div className="absolute -inset-3 rounded-[2rem] border border-dashed border-cyan-500/20" />
-                <Cpu className="mb-3 h-14 w-14 text-cyan-300" strokeWidth={1.3} />
-                <span className="font-mono text-base font-bold tracking-widest text-white">EMBEDDED</span>
-                <span className="mt-1 font-mono text-xs text-cyan-300">SYSTEMS / FW</span>
-              </div>
-            </div>
-            <div className="absolute left-5 top-5 rounded-lg border border-cyan-300/20 bg-[#071221]/80 px-3 py-2 font-mono text-[11px] text-cyan-300"><span className="animate-pulse">●</span> SYSTEM ONLINE</div>
-            <div className="absolute bottom-5 right-5 rounded-lg border border-cyan-300/20 bg-[#071221]/80 px-3 py-2 font-mono text-[11px] text-slate-300">ARM · RISC-V · ESP32</div>
+          className="relative mx-auto w-full max-w-[460px]" aria-label="Portrait of Muhammad Talha Khan">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-cyan-300/30 bg-[#07182b] shadow-[0_0_100px_rgba(34,211,238,.12)]">
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-300/10 via-transparent to-[#070d1b]/20" aria-hidden="true" />
+            <img
+              src="/images/talha-studio.svg"
+              alt="Muhammad Talha Khan in a white outfit against a dark blue studio background"
+              width={520}
+              height={760}
+              loading="eager"
+              decoding="async"
+              className="h-full w-full object-cover object-top"
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#070d1b]/70 to-transparent" aria-hidden="true" />
           </div>
           <div className="absolute -bottom-5 left-4 right-4 grid grid-cols-3 gap-2 rounded-xl border border-white/10 bg-[#101b30]/95 p-3 text-center shadow-2xl backdrop-blur sm:left-8 sm:right-8 sm:p-4">
             <div><CircuitBoard className="mx-auto mb-1 h-5 w-5 text-cyan-300" /><span className="text-[11px] text-slate-300 sm:text-xs">Firmware</span></div>
