@@ -40,10 +40,10 @@ export function HeroSection() {
             I enjoy building dependable engineering solutions.
           </p>
           <div className="mb-9 flex flex-wrap gap-3">
-            <Link href="#projects" className="group inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300">
+            <Link href="/#featured" className="group inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300">
               Explore My Work <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
-            <Link href="#experience" className="inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-white/5 px-6 py-3 font-semibold text-white transition hover:border-cyan-300/70 hover:bg-white/10">
+            <Link href="/about#experience" className="inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-white/5 px-6 py-3 font-semibold text-white transition hover:border-cyan-300/70 hover:bg-white/10">
               My Experience <ArrowDown className="h-4 w-4" />
             </Link>
             <Link href="/documents/mtalha-khan-resume.pdf" target="_blank" className="inline-flex items-center gap-2 rounded-xl border border-slate-600 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-300/70">Resume</Link>
