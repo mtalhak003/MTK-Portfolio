@@ -159,7 +159,7 @@ export function ProjectCatalog() {
           <div className="grid gap-4 md:grid-cols-3">
             {featuredProjects.map((project, index) => (
               <a key={project.title} href={"#project-gallery"} onClick={() => { setCategory(project.category); setSearch(project.title); setFeaturedOnly(false); setVisibleCount(8) }}
-                className={\`group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br p-6 text-white shadow-lg transition-transform hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 \${categoryGradient[project.category] || "from-violet-600 to-blue-800"}\`}>
+                className={`group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br p-6 text-white shadow-lg transition-transform hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 ${categoryGradient[project.category] || "from-violet-600 to-blue-800"}`}>
                 <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full border border-white/20 bg-white/10" />
                 <div className="relative z-10 flex items-center justify-between">
                   <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-medium">Featured 0{index + 1}</span>
@@ -188,7 +188,7 @@ export function ProjectCatalog() {
               const count = item === "All Projects" ? projects.length : projects.filter(p => p.category === item).length
               return (
                 <button key={item} onClick={() => { setCategory(item); setVisibleCount(8) }} aria-pressed={category === item}
-                  className={\`rounded-full border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 \${category === item ? "border-purple-600 bg-purple-600 text-white" : "border-gray-300 bg-white text-gray-700 hover:border-purple-500 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200"}\`}>
+                  className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500 ${category === item ? "border-purple-600 bg-purple-600 text-white" : "border-gray-300 bg-white text-gray-700 hover:border-purple-500 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200"}`}>
                   {item} <span className={category === item ? "ml-1 text-white/75" : "ml-1 text-gray-400"}>{count}</span>
                 </button>
               )
@@ -221,7 +221,7 @@ export function ProjectCatalog() {
           <div className="grid gap-6 md:grid-cols-2">
             {filtered.slice(0, visibleCount).map(project => (
               <article key={project.title} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:border-gray-700 dark:bg-gray-900">
-                <div className={\`relative h-24 overflow-hidden bg-gradient-to-r \${categoryGradient[project.category] || "from-purple-600 to-blue-600"}\`}>
+                <div className={`relative h-24 overflow-hidden bg-gradient-to-r ${categoryGradient[project.category] || "from-purple-600 to-blue-600"}`}>
                   <div className="absolute -right-8 -top-12 h-36 w-36 rounded-full border border-white/20 bg-white/10" />
                   <div className="absolute bottom-4 left-6 flex items-center gap-2 text-sm font-semibold text-white">
                     <span className="rounded-md bg-white/20 px-3 py-1">{project.category}</span>
