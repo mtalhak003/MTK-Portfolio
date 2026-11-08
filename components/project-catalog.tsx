@@ -134,18 +134,18 @@ export function ProjectCatalog() {
         </div>
 
         <div className="mb-12 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-2xl border border-cyan-400/20 bg-[#102139] p-5 dark:border-purple-900 bg-[#0c2441]/40">
+          <div className="rounded-2xl border border-cyan-400/20 bg-[#102139] p-5 dark:border-cyan-300/20 bg-[#0c2441]/40">
             <Layers className="mb-4 h-6 w-6 text-cyan-300 text-cyan-300" />
             <p className="text-3xl font-bold">{projects.length}</p>
             <p className="text-sm text-slate-300 dark:text-gray-300">Projects showcased</p>
           </div>
           <div className="rounded-2xl border border-cyan-300/20 bg-[#12233b] p-5">
-            <Cpu className="mb-4 h-6 w-6 text-sky-600 dark:text-sky-400" />
+            <Cpu className="mb-4 h-6 w-6 text-cyan-300 dark:text-cyan-300" />
             <p className="text-3xl font-bold">{categories.length - 1}</p>
             <p className="text-sm text-slate-300 dark:text-gray-300">Engineering disciplines</p>
           </div>
           <div className="rounded-2xl border border-cyan-300/20 bg-[#12233b] p-5">
-            <Code2 className="mb-4 h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+            <Code2 className="mb-4 h-6 w-6 text-cyan-300 dark:text-cyan-300" />
             <p className="text-3xl font-bold">{projects.filter(p => p.github).length}</p>
             <p className="text-sm text-slate-300 dark:text-gray-300">Linked source repositories</p>
           </div>
