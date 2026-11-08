@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowDown, ArrowUpRight, Cpu, Github, Linkedin, Mail, Terminal, Zap, CircuitBoard, Radio } from "lucide-react"
+import { ArrowDown, ArrowUpRight, Cpu, Github, Linkedin, Mail, CalendarDays, FileText, Terminal, Zap, CircuitBoard, Radio } from "lucide-react"
 import { motion } from "framer-motion"
 
 const signals = [
@@ -46,7 +46,8 @@ export function HeroSection() {
             <Link href="/about#experience" className="inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-white/5 px-6 py-3 font-semibold text-white transition hover:border-cyan-300/70 hover:bg-white/10">
               My Experience <ArrowDown className="h-4 w-4" />
             </Link>
-            <Link href="/documents/mtalha-khan-resume.pdf" target="_blank" className="inline-flex items-center gap-2 rounded-xl border border-slate-600 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-300/70">Resume</Link>
+            <Link href="/documents/mtalha-khan-resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-slate-600 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-300/70 hover:bg-white/10"><FileText className="h-4 w-4" /> View Resume</Link>
+            <a href="https://calendly.com/mtalhak9753/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/40 bg-cyan-300/10 px-5 py-3 text-sm font-semibold text-cyan-200 transition hover:border-cyan-300 hover:bg-cyan-300/20"><CalendarDays className="h-4 w-4" /> Book a Meeting <ArrowUpRight className="h-4 w-4" /></a>
           </div>
           <div className="flex flex-wrap items-center gap-5 text-sm text-slate-400">
             <a href="https://github.com/mtalhak003" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="inline-flex items-center gap-2 transition hover:text-cyan-300"><Github className="h-5 w-5" /> GitHub</a>
