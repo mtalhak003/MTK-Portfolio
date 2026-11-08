@@ -72,3 +72,16 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .circuit-signal { animation: none; stroke-dasharray: none; opacity: .4; }
 }
+
+/* Seamless, pause-on-hover embedded technology marquee */
+@keyframes technology-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.tech-marquee { animation: technology-marquee-scroll 42s linear infinite; }
+.tech-marquee:hover, .tech-marquee:focus-within { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .tech-marquee { animation: none; width: 100%; flex-wrap: wrap; justify-content: center; gap: .5rem; padding: 0 .75rem; }
+  .tech-marquee > div { flex-wrap: wrap; justify-content: center; }
+  .tech-marquee > div:nth-child(2) { display: none; }
+}
