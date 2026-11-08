@@ -39,14 +39,18 @@ export function HeroSection() {
             connected devices, real-time sensing, and edge AI. From the ESP32 to ARM and RISC-V,
             I enjoy building dependable engineering solutions.
           </p>
-          <div className="mb-9 flex flex-wrap gap-3">
-            <Link href="/documents/mtalha-khan-resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-slate-600 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-300/70 hover:bg-white/10"><FileText className="h-4 w-4" /> View Resume</Link>
-            <a href="https://calendly.com/mtalhak9753/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/40 bg-cyan-300/10 px-5 py-3 text-sm font-semibold text-cyan-200 transition hover:border-cyan-300 hover:bg-cyan-300/20"><CalendarDays className="h-4 w-4" /> Book a Meeting <ArrowUpRight className="h-4 w-4" /></a>
+          <div className="mb-6 flex flex-wrap items-center gap-4 text-sm text-slate-400" aria-label="Social and contact links">
+            <a href="https://github.com/mtalhak003" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub" className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-300/20 bg-white/5 transition hover:border-cyan-300/60 hover:text-cyan-300"><Github className="h-5 w-5" /></a>
+            <a href="https://www.linkedin.com/in/muhammad-talha-khan-730b783aa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-300/20 bg-white/5 transition hover:border-cyan-300/60 hover:text-cyan-300"><Linkedin className="h-5 w-5" /></a>
+            <a href="mailto:mtalhak9753@gmail.com" aria-label="Email me" title="Email" className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-300/20 bg-white/5 transition hover:border-cyan-300/60 hover:text-cyan-300"><Mail className="h-5 w-5" /></a>
           </div>
-          <div className="flex flex-wrap items-center gap-5 text-sm text-slate-400">
-            <a href="https://github.com/mtalhak003" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="inline-flex items-center gap-2 transition hover:text-cyan-300"><Github className="h-5 w-5" /> GitHub</a>
-            <a href="https://www.linkedin.com/in/muhammad-talha-khan-730b783aa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="inline-flex items-center gap-2 transition hover:text-cyan-300"><Linkedin className="h-5 w-5" /> LinkedIn</a>
-            <a href="mailto:mtalhak9753@gmail.com" className="inline-flex items-center gap-2 transition hover:text-cyan-300"><Mail className="h-5 w-5" /> Contact</a>
+          <div className="mb-7 flex flex-wrap gap-3">
+            <a href="https://calendly.com/mtalhak9753/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"><CalendarDays className="h-4 w-4" /> Book a Meeting <ArrowUpRight className="h-4 w-4" /></a>
+            <Link href="/documents/mtalha-khan-resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/40 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-300 hover:bg-white/10"><FileText className="h-4 w-4" /> View Resume</Link>
+          </div>
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-cyan-300/15 pt-5">
+            <div className="flex items-baseline gap-2"><span className="text-2xl font-bold tracking-tight text-cyan-300">1+</span><span className="text-sm font-medium text-slate-300">Year Experience</span></div>
+            <div className="flex items-baseline gap-2"><span className="text-2xl font-bold tracking-tight text-cyan-300">35+</span><span className="text-sm font-medium text-slate-300">Projects Done</span></div>
           </div>
         </motion.div>
 
