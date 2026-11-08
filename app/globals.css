@@ -61,3 +61,14 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Animated circuit signal traces in the landing hero */
+@keyframes circuit-flow {
+  from { stroke-dashoffset: 100; opacity: .25; }
+  35% { opacity: 1; }
+  to { stroke-dashoffset: 0; opacity: .7; }
+}
+.circuit-signal { animation: circuit-flow 5s linear infinite; filter: drop-shadow(0 0 5px rgba(103,232,249,.8)); }
+@media (prefers-reduced-motion: reduce) {
+  .circuit-signal { animation: none; stroke-dasharray: none; opacity: .4; }
+}
