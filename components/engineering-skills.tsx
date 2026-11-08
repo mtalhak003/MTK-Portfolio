@@ -1,4 +1,4 @@
-import { Binary, Braces, CircuitBoard, Code2, Cpu, Layers3, TerminalSquare, Wrench, BrainCircuit, Globe2, PlugZap } from "lucide-react"
+import { Binary, Braces, CircuitBoard, Code2, Cpu, Layers3, TerminalSquare, Wrench, BrainCircuit, Globe2, PlugZap, Cable, Database, Network } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 
 type SkillGroup = { title: string; icon: LucideIcon; description: string; skills: string[] }
@@ -11,52 +11,58 @@ const stack = [
 
 const skillGroups: SkillGroup[] = [
   {
-    title: "HDL & Design",
+    title: "HDL & Digital Design",
     icon: Braces,
-    description: "Hardware description and digital architecture",
+    description: "Hardware description, RTL and architecture",
     skills: ["SystemVerilog / Verilog", "Pipelined Architectures"],
   },
   {
-    title: "FPGA & Tools",
+    title: "FPGA, Simulation & EDA",
     icon: CircuitBoard,
-    description: "Design, synthesis, and simulation",
-    skills: ["Xilinx Vivado", "ModelSim", "Xilinx ISE"],
+    description: "FPGA development, simulation and circuit design",
+    skills: ["Xilinx Vivado", "Xilinx ISE", "ModelSim", "PSpice", "Proteus"],
   },
   {
-    title: "Embedded",
+    title: "Microcontrollers & Boards",
     icon: Cpu,
-    description: "Microcontrollers and hardware interfaces",
-    skills: ["ESP32", "MSP430", "Raspberry Pi Pico", "Raspberry Pi", "Embedded C/C++", "UART", "SPI", "I²C", "GPIO", "Timers / Interrupts", "Sensor Integration", "Edge Inference", "IoT Networking", "Actuator Control"],
+    description: "Embedded hardware platforms",
+    skills: ["ESP32", "MSP430", "Raspberry Pi Pico", "Raspberry Pi"],
+  },
+  {
+    title: "Embedded Firmware & Interfaces",
+    icon: Cable,
+    description: "Peripheral control and connected systems",
+    skills: ["Embedded C/C++", "UART", "SPI", "I²C", "GPIO", "Timers / Interrupts", "Sensor Integration", "Actuator Control", "IoT Networking"],
   },
   {
     title: "Programming Languages",
     icon: Code2,
-    description: "Firmware, automation, and application code",
-    skills: ["C", "C++", "Python", "SystemVerilog / Verilog"],
+    description: "General-purpose and scripting languages",
+    skills: ["C", "C++", "Python", "JavaScript"],
   },
   {
-    title: "Other Tools",
-    icon: Wrench,
-    description: "Development environments and electronics tools",
-    skills: ["Git / GitHub", "Linux", "MATLAB", "PSpice", "Proteus", "Docker", "Cloud Platforms", "Postman"],
-  },
-  {
-    title: "AI & Computer Vision",
+    title: "AI, Computer Vision & Edge AI",
     icon: BrainCircuit,
-    description: "Learning models, perception, and deployment",
-    skills: ["YOLOv11", "RF-DETR", "OpenCV", "TensorFlow", "PyTorch", "NLP", "Object Detection", "Model Deployment", "Hugging Face"],
+    description: "Machine learning and real-world perception",
+    skills: ["Edge Inference", "YOLOv11", "RF-DETR", "OpenCV", "TensorFlow", "PyTorch", "NLP", "Object Detection", "Model Deployment", "Hugging Face"],
   },
   {
-    title: "Web Development",
+    title: "Web & Application Development",
     icon: Globe2,
-    description: "Applications, interfaces, and backend services",
-    skills: ["JavaScript", "Next.js", "React", "Node.js", "REST APIs", "HTML / CSS", "Full-Stack Development"],
+    description: "Frontend, backend and web services",
+    skills: ["Next.js", "React", "Node.js", "HTML / CSS", "Full-Stack Development", "REST APIs"],
   },
   {
-    title: "Integration & Databases",
-    icon: PlugZap,
-    description: "Connected applications and practical systems integration",
-    skills: ["LLM APIs", "WhatsApp Integration", "Firebase", "MongoDB", "PostgreSQL"],
+    title: "Databases & Integrations",
+    icon: Database,
+    description: "Data services and software integration",
+    skills: ["Firebase", "MongoDB", "PostgreSQL", "LLM APIs", "WhatsApp Integration", "Postman"],
+  },
+  {
+    title: "Developer & Engineering Tools",
+    icon: Wrench,
+    description: "Version control, operating systems and deployment",
+    skills: ["Git / GitHub", "Linux", "MATLAB", "Docker", "Cloud Platforms"],
   },
 ]
 
