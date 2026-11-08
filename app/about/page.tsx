@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { ChevronRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { EngineeringSkills } from "@/components/engineering-skills"
 import { Navbar } from "@/components/navbar"
@@ -12,11 +11,10 @@ export default function AboutPage() {
       <header className="relative overflow-hidden bg-[#091428] px-4 pb-16 pt-32 text-white">
         <div className="container mx-auto max-w-6xl">
           <p className="mb-3 font-mono text-sm uppercase tracking-[.2em] text-cyan-300">Engineering background</p>
-          <h1 className="mb-5 text-4xl font-bold md:text-5xl">About Me & Engineering Background</h1>
+          <h1 className="mb-5 text-4xl font-bold md:text-5xl">Education, Experience & Technical Skills</h1>
           <p className="max-w-2xl leading-8 text-slate-300">Explore my education and achievements, professional experience, and technical expertise in embedded systems.</p>
           <nav aria-label="About page sections" className="mt-7 flex flex-wrap gap-3 text-sm">
             <a className="rounded-full border border-cyan-400/30 px-4 py-2 hover:bg-white/10" href="#education">Education</a>
-            <a className="rounded-full border border-cyan-400/30 px-4 py-2 hover:bg-white/10" href="#about">About Me</a>
             <a className="rounded-full border border-cyan-400/30 px-4 py-2 hover:bg-white/10" href="#experience">Experience</a>
             <a className="rounded-full border border-cyan-400/30 px-4 py-2 hover:bg-white/10" href="#skills">Technical Skills</a>
             <Link className="rounded-full border border-cyan-400/30 px-4 py-2 hover:bg-white/10" href="/work">Work & Projects</Link>
@@ -92,67 +90,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-
-      {/* About Section */}
-      <section id="about" className="py-16 px-4 bg-[#102139] relative overflow-hidden">
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <AnimatedSection direction="left" delay={0.2}>
-              <div className="space-y-4">
-                <p className="text-lg text-slate-300 dark:text-gray-300">
-                  I'm a Computer Systems Engineering graduate from UET Peshawar, focused on embedded systems
-                  and edge AI. I build systems that combine sensors, hardware, and machine learning to solve
-                  real-world problems.
-                </p>
-                <p className="text-lg text-slate-300 dark:text-gray-300">
-                  My core strength is designing and deploying computer vision and edge inference pipelines
-                  on constrained hardware, from ESP32 sensor nodes to Raspberry Pi-based edge devices, backed
-                  by research experience at the Secured IoT Devices (SID) Lab.
-                </p>
-                <p className="text-lg text-slate-300 dark:text-gray-300">
-                  Alongside embedded and AI work, I build full-stack web applications and automation
-                  solutions that integrate software, APIs, and databases for practical, client-facing
-                  tools.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection direction="right" delay={0.4}>
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Key Expertise</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start group">
-                    <ChevronRight className="w-5 h-5 text-cyan-300 mt-0.5 flex-shrink-0 transform group-hover:translate-x-1 transition-transform duration-300" />
-                    <span className="text-slate-300 dark:text-gray-300">
-                      Embedded Systems & Sensor Node Design
-                    </span>
-                  </li>
-                  <li className="flex items-start group">
-                    <ChevronRight className="w-5 h-5 text-cyan-300 mt-0.5 flex-shrink-0 transform group-hover:translate-x-1 transition-transform duration-300" />
-                    <span className="text-slate-300 dark:text-gray-300">Edge AI & On-Device Inference</span>
-                  </li>
-                  <li className="flex items-start group">
-                    <ChevronRight className="w-5 h-5 text-cyan-300 mt-0.5 flex-shrink-0 transform group-hover:translate-x-1 transition-transform duration-300" />
-                    <span className="text-slate-300 dark:text-gray-300">Computer Vision (YOLOv11, RF-DETR)</span>
-                  </li>
-                  <li className="flex items-start group">
-                    <ChevronRight className="w-5 h-5 text-cyan-300 mt-0.5 flex-shrink-0 transform group-hover:translate-x-1 transition-transform duration-300" />
-                    <span className="text-slate-300 dark:text-gray-300">Full-Stack Web Development</span>
-                  </li>
-                  <li className="flex items-start group">
-                    <ChevronRight className="w-5 h-5 text-cyan-300 mt-0.5 flex-shrink-0 transform group-hover:translate-x-1 transition-transform duration-300" />
-                    <span className="text-slate-300 dark:text-gray-300">API Integration & Embedded Automation</span>
-                  </li>
-                </ul>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
 
       {/* Professional Experience */}
       <section id="experience" className="relative overflow-hidden bg-[#0b1325] px-4 py-20 text-white">
