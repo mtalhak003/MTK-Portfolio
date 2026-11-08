@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
+import { TechnologyStrip } from "@/components/technology-strip"
 import { HomeFeaturedWork } from "@/components/home-featured-work"
 import { AnimatedSection } from "@/components/client-animations"
 
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       <Navbar />
       <HeroSection />
+      <TechnologyStrip />
       <HomeFeaturedWork />
       <section className="bg-white px-4 py-16 text-center dark:bg-gray-900">
         <div className="container mx-auto max-w-3xl">
