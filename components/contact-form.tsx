@@ -82,7 +82,7 @@ export function ContactForm() {
           <motion.input
             id="name"
             type="text"
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
+            className="w-full px-3 py-2 border border-[#36516c] border-[#29425f] rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 bg-[#12233b]"
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
@@ -98,7 +98,7 @@ export function ContactForm() {
           <motion.input
             id="email"
             type="email"
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
+            className="w-full px-3 py-2 border border-[#36516c] border-[#29425f] rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 bg-[#12233b]"
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
@@ -115,7 +115,7 @@ export function ContactForm() {
         <motion.input
           id="subject"
           type="text"
-          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
+          className="w-full px-3 py-2 border border-[#36516c] border-[#29425f] rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 bg-[#12233b]"
           placeholder="Subject"
           value={formData.subject}
           onChange={handleChange}
@@ -131,7 +131,7 @@ export function ContactForm() {
         <motion.textarea
           id="message"
           rows={5}
-          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
+          className="w-full px-3 py-2 border border-[#36516c] border-[#29425f] rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 bg-[#12233b]"
           placeholder="Your Message"
           value={formData.message}
           onChange={handleChange}
@@ -143,7 +143,7 @@ export function ContactForm() {
       <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
         <Button type="submit" className="w-full relative overflow-hidden group" disabled={isSubmitting}>
           <span className="relative z-10">{isSubmitting ? "Sending..." : "Send Message"}</span>
-          <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+          <span className="absolute inset-0 bg-[#102139] opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
         </Button>
       </motion.div>
     </motion.form>
