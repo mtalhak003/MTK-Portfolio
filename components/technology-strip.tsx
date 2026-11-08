@@ -4,8 +4,10 @@ import { Cpu, CircuitBoard, Radio, Workflow } from "lucide-react"
 
 const technologies = [
   "I²C", "SPI", "UART", "Proteus", "Raspberry Pi", "Arduino",
-  "FPGA", "MATLAB", "Verilog", "ESP32", "ARM Cortex-M", "RISC-V",
-  "QEMU", "GDB", "Python", "C / C++", "IoT", "Edge AI",
+  "FPGA", "MATLAB", "Verilog", "SystemVerilog", "Xilinx", "ModelSim",
+  "MSP430", "ESP32", "ARM Cortex-M", "RISC-V", "Python", "Bash",
+  "CLI", "CI/CD", "Git", "Linux", "C/C++", "AutoCAD",
+  "QEMU", "GDB", "IoT", "Edge AI",
 ]
 
 export function TechnologyStrip() {
