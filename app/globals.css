@@ -61,3 +61,63 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Animated circuit signal traces in the landing hero */
+@keyframes circuit-flow {
+  from { stroke-dashoffset: 100; opacity: .25; }
+  35% { opacity: 1; }
+  to { stroke-dashoffset: 0; opacity: .7; }
+}
+.circuit-signal { animation: circuit-flow 5s linear infinite; filter: drop-shadow(0 0 5px rgba(103,232,249,.8)); }
+@media (prefers-reduced-motion: reduce) {
+  .circuit-signal { animation: none; stroke-dasharray: none; opacity: .4; }
+}
+
+/* Seamless, pause-on-hover embedded technology marquee */
+@keyframes technology-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.tech-marquee { animation: technology-marquee-scroll 42s linear infinite; }
+.tech-marquee:hover, .tech-marquee:focus-within { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .tech-marquee { animation: none; width: 100%; flex-wrap: wrap; justify-content: center; gap: .5rem; padding: 0 .75rem; }
+  .tech-marquee > div { flex-wrap: wrap; justify-content: center; }
+  .tech-marquee > div:nth-child(2) { display: none; }
+}
+
+/* Consistent embedded engineering visual language across both routes */
+.portfolio-theme {
+  --background: 218 56% 8%;
+  --foreground: 210 40% 98%;
+  --card: 216 46% 15%;
+  --card-foreground: 210 40% 98%;
+  --secondary: 216 42% 19%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 216 42% 18%;
+  --muted-foreground: 214 22% 72%;
+  --border: 198 35% 26%;
+  --input: 198 35% 26%;
+  --primary: 188 86% 53%;
+  --primary-foreground: 222 63% 9%;
+  --ring: 188 86% 53%;
+  color: #eff8ff;
+  background: #081121;
+}
+.portfolio-theme :is(#about, #skills, #education, #projects, #contact) {
+  scroll-margin-top: 4.25rem;
+}
+.portfolio-theme input:not([type="checkbox"]),
+.portfolio-theme textarea,
+.portfolio-theme select {
+  color: #f5fbff;
+  background-color: #0b1628;
+  border-color: rgba(103, 232, 249, .26);
+}
+.portfolio-theme input::placeholder,
+.portfolio-theme textarea::placeholder { color: #a4b5c7; }
+.portfolio-theme input:focus-visible,
+.portfolio-theme textarea:focus-visible,
+.portfolio-theme select:focus-visible { outline-color: #67e8f9; }
+.portfolio-theme a:focus-visible,
+.portfolio-theme button:focus-visible { outline: 2px solid #67e8f9; outline-offset: 3px; }

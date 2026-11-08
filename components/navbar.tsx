@@ -29,17 +29,17 @@ export function Navbar() {
   }
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Work", href: "/work" },
+    { name: "Publications", href: "/publications" },
+    { name: "Contact", href: "/#contact" },
   ]
 
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-[#091426]/95 border-b border-cyan-300/15 backdrop-blur-md shadow-lg" : "bg-[#091426]/70 backdrop-blur-sm"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -55,7 +55,7 @@ export function Navbar() {
           >
             <Link
               href="/"
-              className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
+              className="text-xl font-bold bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent"
             >
               Muhammad Talha Khan
             </Link>
@@ -78,10 +78,10 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="px-3 py-2 text-sm font-medium hover:text-purple-600 dark:hover:text-purple-400 transition-colors relative group"
+                    className="px-3 py-2 text-sm font-medium transition-colors relative group text-slate-200 hover:text-cyan-300"
                   >
                     {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-300 group-hover:w-full transition-all duration-300"></span>
                   </Link>
                 </motion.div>
               ))}
@@ -93,7 +93,7 @@ export function Navbar() {
               transition={{ delay: 0.8 }}
             >
               <Link href="/documents/mtalha-khan-resume.pdf" target="_blank" download>
-                <Button variant="outline" size="sm" className="relative overflow-hidden group">
+                <Button variant="outline" size="sm" className="relative overflow-hidden group border-cyan-300/50 bg-[#12233b] text-cyan-200 hover:bg-[#173654] hover:text-white">
                   <span className="relative z-10">Download Resume</span>
                   <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
                 </Button>
@@ -112,7 +112,7 @@ export function Navbar() {
             <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-cyan-300 focus:outline-none"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -126,7 +126,7 @@ export function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden bg-white dark:bg-gray-900 shadow-lg"
+            className="md:hidden bg-[#0c1b30] border-b border-cyan-300/20 text-white shadow-lg"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -142,7 +142,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                    className="block px-3 py-2 rounded-md text-base font-medium hover:text-cyan-300 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
@@ -154,7 +154,7 @@ export function Navbar() {
                   href="/documents/mtalha-khan-resume.pdf"
                   target="_blank"
                   download
-                  className="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                  className="block px-3 py-2 rounded-md text-base font-medium hover:text-cyan-300 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   Download Resume
