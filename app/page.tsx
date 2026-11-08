@@ -22,7 +22,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950">
       {/* Background Effects */}
       <AnimatedGradientBackground />
-      <ParticleBackground />
+      {/* Circuit animation in the hero replaces the global particle layer. */}
       <ScrollIndicator />
       <SmoothScroll />
 
@@ -93,86 +93,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="py-16 px-4 bg-gray-50 dark:bg-gray-900 relative">
-        <div className="container mx-auto max-w-6xl relative z-10">
+      {/* Professional Experience */}
+      <section id="experience" className="relative overflow-hidden bg-[#0b1325] px-4 py-20 text-white">
+        <div className="pointer-events-none absolute inset-0 opacity-30" aria-hidden="true" style={{ backgroundImage: "linear-gradient(rgba(60,170,210,.12) 1px, transparent 1px),linear-gradient(90deg,rgba(60,170,210,.12) 1px,transparent 1px)", backgroundSize: "52px 52px" }} />
+        <div className="container relative z-10 mx-auto max-w-6xl">
           <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8 text-center">Professional Experience</h2>
+            <p className="mb-3 text-center font-mono text-xs font-semibold uppercase tracking-[.2em] text-cyan-300">Career timeline</p>
+            <h2 className="mb-4 text-center text-3xl font-bold md:text-4xl">Professional Experience & Leadership</h2>
+            <p className="mx-auto mb-14 max-w-2xl text-center text-slate-300">Research, real-world development, technical leadership, and hands-on embedded systems work.</p>
           </AnimatedSection>
-
-          <div className="space-y-8">
-            <AnimatedSection delay={0.2}>
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-purple-600 hover:-translate-y-1 transition-transform duration-300">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold">Research Assistant</h3>
-                    <p className="text-purple-600 dark:text-purple-400 font-medium">Secured IoT Devices (SID) Lab</p>
+          <div className="relative mx-auto max-w-4xl">
+            <div className="absolute bottom-8 left-[17px] top-7 w-px bg-gradient-to-b from-cyan-400 via-violet-400 to-transparent md:left-[23px]" aria-hidden="true" />
+            {[
+              { role: "Research Assistant", organization: "Secured IoT Devices (SID) Lab", period: "2025 – Present", area: "Embedded AI & Research", details: ["Research on edge AI and computer vision for IoT deployments, including work contributing to conference-level academic research.", "Development and evaluation of detection models for practical sensing applications."] },
+              { role: "Freelance Developer", organization: "Self-Employed", period: "2024 – Present", area: "Software & Automation", details: ["Developed websites and automation workflows for clients, including online-booking integration for dental practice websites.", "Built automation workflows using n8n, Zapier, Make.com, LLM APIs, WhatsApp, and database integrations."] },
+              { role: "Embedded Systems Lead", organization: "Google Developer Groups on Campus (GDGoC)", period: "2023 – July 2026", area: "Embedded Leadership", details: ["Led embedded systems initiatives and guided peers working on hardware and IoT projects."] },
+              { role: "Director of Operations", organization: "Computer Society, UET Peshawar", period: "2023 – July 2026", area: "Technical Operations", details: ["Coordinated operations for student society events and technical initiatives."] },
+            ].map((item, index) => (
+              <AnimatedSection key={item.role} delay={index * .1}>
+                <div className="relative mb-6 pl-12 md:pl-16">
+                  <div className="absolute left-[9px] top-8 h-[17px] w-[17px] rounded-full border-4 border-[#0b1325] bg-cyan-300 shadow-[0_0_0_2px_rgba(103,232,249,.4),0_0_20px_rgba(34,211,238,.3)] md:left-[15px]" aria-hidden="true" />
+                  <div className="rounded-2xl border border-white/10 bg-[#121f35]/90 p-6 shadow-xl transition-colors hover:border-cyan-300/40 md:p-7">
+                    <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                      <div>
+                        <p className="mb-2 text-xs font-semibold uppercase tracking-[.15em] text-cyan-300">{item.area}</p>
+                        <h3 className="text-xl font-bold md:text-2xl">{item.role}</h3>
+                        <p className="mt-1 font-medium text-slate-300">{item.organization}</p>
+                      </div>
+                      <span className="w-fit shrink-0 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1.5 font-mono text-xs text-cyan-200">{item.period}</span>
+                    </div>
+                    <ul className="list-disc space-y-2 pl-5 leading-relaxed text-slate-300">
+                      {item.details.map(detail => <li key={detail}>{detail}</li>)}
+                    </ul>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-400 mt-2 md:mt-0">2025 - Present</p>
                 </div>
-                <ul className="space-y-2 list-disc list-inside text-gray-700 dark:text-gray-300">
-                  <li>
-                    Conducted research on edge AI and computer vision for IoT deployments, contributing to
-                    conference-level academic work.
-                  </li>
-                  <li>
-                    Developed and evaluated detection models for real-world sensing applications.
-                  </li>
-                </ul>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3}>
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-purple-600 hover:-translate-y-1 transition-transform duration-300">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold">Freelance Developer</h3>
-                    <p className="text-purple-600 dark:text-purple-400 font-medium">Self-Employed</p>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 mt-2 md:mt-0">2024 - Present</p>
-                </div>
-                <ul className="space-y-2 list-disc list-inside text-gray-700 dark:text-gray-300">
-                  <li>
-                    Built websites and automation workflows for clients, including web development for German
-                    dental practices with online booking integration.
-                  </li>
-                  <li>
-                    Designed automation pipelines using n8n, Zapier, and Make.com, integrating LLM APIs,
-                    WhatsApp, and databases.
-                  </li>
-                </ul>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.4}>
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-purple-600 hover:-translate-y-1 transition-transform duration-300">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold">Embedded Systems Lead</h3>
-                    <p className="text-purple-600 dark:text-purple-400 font-medium">Google Developer Groups on Campus (GDGoC)</p>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 mt-2 md:mt-0">2023 - July 2026</p>
-                </div>
-                <ul className="space-y-2 list-disc list-inside text-gray-700 dark:text-gray-300">
-                  <li>Led embedded systems initiatives and mentored members on hardware and IoT projects.</li>
-                </ul>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.5}>
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-purple-600 hover:-translate-y-1 transition-transform duration-300">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold">Director of Operations</h3>
-                    <p className="text-purple-600 dark:text-purple-400 font-medium">Computer Society, UET Peshawar</p>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 mt-2 md:mt-0">2023 - July 2026</p>
-                </div>
-                <ul className="space-y-2 list-disc list-inside text-gray-700 dark:text-gray-300">
-                  <li>Managed operations for society events and technical initiatives on campus.</li>
-                </ul>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
