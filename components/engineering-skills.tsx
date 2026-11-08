@@ -20,7 +20,7 @@ const skillGroups: SkillGroup[] = [
     title: "FPGA, Simulation & EDA",
     icon: CircuitBoard,
     description: "FPGA development, simulation and circuit design",
-    skills: ["Xilinx Vivado", "Xilinx ISE", "ModelSim", "PSpice", "Proteus"],
+    skills: ["Xilinx ISE", "ModelSim", "PSpice", "Proteus"],
   },
   {
     title: "Microcontrollers & Boards",
@@ -38,7 +38,7 @@ const skillGroups: SkillGroup[] = [
     title: "Programming Languages",
     icon: Code2,
     description: "General-purpose and scripting languages",
-    skills: ["C", "C++", "Python", "JavaScript"],
+    skills: ["C", "C++", "Python", "JavaScript", "PHP"],
   },
   {
     title: "AI, Computer Vision & Edge AI",
@@ -50,13 +50,13 @@ const skillGroups: SkillGroup[] = [
     title: "Web & Application Development",
     icon: Globe2,
     description: "Frontend, backend and web services",
-    skills: ["Next.js", "React", "Node.js", "HTML / CSS", "Full-Stack Development", "REST APIs"],
+    skills: ["Next.js", "React", "Node.js", "Laravel", "HTML / CSS", "Full-Stack Development", "REST APIs"],
   },
   {
     title: "Databases & Integrations",
     icon: Database,
     description: "Data services and software integration",
-    skills: ["Firebase", "MongoDB", "PostgreSQL", "LLM APIs", "WhatsApp Integration", "Postman"],
+    skills: ["Firebase", "MySQL", "MongoDB", "PostgreSQL", "LLM APIs", "WhatsApp Integration"],
   },
   {
     title: "Developer & Engineering Tools",
