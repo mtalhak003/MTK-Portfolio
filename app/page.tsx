@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, CalendarDays, ArrowUpRight, FileText } from "lucide-react"
 import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { Navbar } from "@/components/navbar"
@@ -67,10 +67,29 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="pt-4">
-                  <p className="text-slate-300 text-slate-300">
-                    I'm always open to discussing new projects, research opportunities, or collaborations.
-                    Feel free to reach out!
+                  <p className="text-slate-300">
+                    I'm always open to discussing embedded systems, firmware roles, research opportunities, or collaborations.
+                    Send a message or book a 30-minute meeting.
                   </p>
+                </div>
+                <div className="rounded-2xl border border-cyan-300/20 bg-[#12233b] p-5">
+                  <div className="mb-2 flex items-center gap-2 text-cyan-300">
+                    <CalendarDays className="h-5 w-5" />
+                    <h4 className="font-semibold text-white">Schedule a conversation</h4>
+                  </div>
+                  <p className="mb-4 text-sm leading-6 text-slate-300">
+                    Choose a convenient time for a 30-minute discussion about engineering projects, opportunities, or collaboration.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <a href="https://calendly.com/mtalhak9753/30min" target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-4 py-2.5 text-sm font-semibold text-[#081121] transition hover:bg-cyan-300">
+                      <CalendarDays className="h-4 w-4" /> Book a Meeting <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                    <a href="/documents/mtalha-khan-resume.pdf" target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/30 px-4 py-2.5 text-sm font-semibold text-cyan-200 transition hover:bg-cyan-300/10">
+                      <FileText className="h-4 w-4" /> View Resume
+                    </a>
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
