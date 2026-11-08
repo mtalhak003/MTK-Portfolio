@@ -137,7 +137,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <AnimatedSection direction="up" delay={0.2}>
-              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/90 bg-[#12233b]/80 backdrop-blur-sm">
+              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/80 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-[#12233b] flex items-center justify-center mr-2">
@@ -178,7 +178,7 @@ export default function AboutPage() {
             </AnimatedSection>
 
             <AnimatedSection direction="up" delay={0.3}>
-              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/90 bg-[#12233b]/80 backdrop-blur-sm">
+              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/80 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-[#12233b] flex items-center justify-center mr-2">
@@ -221,7 +221,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <AnimatedSection direction="up" delay={0.4}>
-              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/90 bg-[#12233b]/80 backdrop-blur-sm">
+              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/80 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-[#12233b] flex items-center justify-center mr-2">
@@ -262,7 +262,7 @@ export default function AboutPage() {
             </AnimatedSection>
 
             <AnimatedSection direction="up" delay={0.5}>
-              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/90 bg-[#12233b]/80 backdrop-blur-sm">
+              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/80 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-[#12233b] flex items-center justify-center mr-2">
@@ -333,7 +333,7 @@ export default function AboutPage() {
       </section>
 
       {/* Education & Certifications */}
-      <section id="education" className="py-16 px-4 bg-[#102139] bg-[#12233b] relative">
+      <section id="education" className="py-16 px-4 bg-[#12233b] relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Education & Certifications</h2>
@@ -342,7 +342,7 @@ export default function AboutPage() {
           <div className="mb-12">
             <AnimatedSection direction="left" delay={0.2}>
               <h3 className="text-2xl font-bold mb-6">Education</h3>
-              <div className="bg-[#0b1628] bg-[#162a45] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1 transition-transform duration-300">
+              <div className="bg-[#162a45] rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1 transition-transform duration-300">
                 <div className="flex flex-col md:flex-row justify-between mb-4">
                   <div>
                     <h4 className="text-xl font-semibold">BSc, Computer Systems Engineering</h4>
@@ -381,17 +381,17 @@ export default function AboutPage() {
             <AnimatedSection direction="right" delay={0.3}>
               <h3 className="text-2xl font-bold mb-6">Certifications & Awards</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-[#0b1628] bg-[#162a45] rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1 transition-transform duration-300">
+                <div className="bg-[#162a45] rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1 transition-transform duration-300">
                   <h4 className="font-semibold">HCIA-AI - Huawei</h4>
                   <p className="text-slate-300 text-slate-400">Foundations of AI theory, algorithms, and Huawei AI development frameworks</p>
                 </div>
-                <div className="bg-[#0b1628] bg-[#162a45] rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1 transition-transform duration-300">
+                <div className="bg-[#162a45] rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1 transition-transform duration-300">
                   <h4 className="font-semibold">JavaScript IT Specialist - Pearson</h4>
                   <p className="text-slate-300 text-slate-400">
                     Core JavaScript programming and web development fundamentals
                   </p>
                 </div>
-                <div className="bg-[#0b1628] bg-[#162a45] rounded-lg p-4 md:col-span-2 shadow-md hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1 transition-transform duration-300">
+                <div className="bg-[#162a45] rounded-lg p-4 md:col-span-2 shadow-md hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1 transition-transform duration-300">
                   <h4 className="font-semibold">1st Place - UET FYP Exhibition 2026</h4>
                   <p className="text-slate-300 text-slate-400">Won for LeafPulse, an AIoT smart greenhouse system</p>
                 </div>
