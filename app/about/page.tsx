@@ -46,7 +46,7 @@ export default function AboutPage() {
                 </p>
                 <p className="text-lg text-slate-300 dark:text-gray-300">
                   Alongside embedded and AI work, I build full-stack web applications and automation
-                  workflows using n8n, Zapier, and Make.com, integrating LLM APIs into practical, client-facing
+                  solutions that integrate software, APIs, and databases for practical, client-facing
                   tools.
                 </p>
               </div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start group">
                     <ChevronRight className="w-5 h-5 text-cyan-300 mt-0.5 flex-shrink-0 transform group-hover:translate-x-1 transition-transform duration-300" />
-                    <span className="text-slate-300 dark:text-gray-300">Workflow Automation (n8n, Zapier, Make.com)</span>
+                    <span className="text-slate-300 dark:text-gray-300">API Integration & Embedded Automation</span>
                   </li>
                 </ul>
               </div>
@@ -98,7 +98,7 @@ export default function AboutPage() {
             <div className="absolute bottom-8 left-[17px] top-7 w-px bg-gradient-to-b from-cyan-400 via-violet-400 to-transparent md:left-[23px]" aria-hidden="true" />
             {[
               { role: "Research Assistant", organization: "Secured IoT Devices (SID) Lab", period: "2025 – Present", area: "Embedded AI & Research", details: ["Research on edge AI and computer vision for IoT deployments, including work contributing to conference-level academic research.", "Development and evaluation of detection models for practical sensing applications."] },
-              { role: "Freelance Developer", organization: "Self-Employed", period: "2024 – Present", area: "Software & Automation", details: ["Developed websites and automation workflows for clients, including online-booking integration for dental practice websites.", "Built automation workflows using n8n, Zapier, Make.com, LLM APIs, WhatsApp, and database integrations."] },
+              { role: "Freelance Developer", organization: "Self-Employed", period: "2024 – Present", area: "Software & Automation", details: ["Developed websites and automation workflows for clients, including online-booking integration for dental practice websites.", "Built practical integrations connecting APIs, messaging services, and databases."] },
               { role: "Embedded Systems Lead", organization: "Google Developer Groups on Campus (GDGoC)", period: "2023 – July 2026", area: "Embedded Leadership", details: ["Led embedded systems initiatives and guided peers working on hardware and IoT projects."] },
               { role: "Director of Operations", organization: "Computer Society, UET Peshawar", period: "2023 – July 2026", area: "Technical Operations", details: ["Coordinated operations for student society events and technical initiatives."] },
             ].map((item, index) => (
@@ -273,15 +273,6 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-3">
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
-                      n8n
-                    </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
-                      Zapier
-                    </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
-                      Make.com
-                    </Badge>
                     <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       LLM APIs
                     </Badge>
