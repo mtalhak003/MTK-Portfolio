@@ -2,6 +2,7 @@ import { ProjectCatalog } from "@/components/project-catalog"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Navbar } from "@/components/navbar"
 import { AnimatedSection, AnimatedGradientBackground } from "@/components/client-animations"
 
