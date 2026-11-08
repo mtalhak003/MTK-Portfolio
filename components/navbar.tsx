@@ -29,11 +29,11 @@ export function Navbar() {
   }
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/about#about" },
+    { name: "Experience", href: "/about#experience" },
+    { name: "Projects", href: "/about#projects" },
+    { name: "Skills", href: "/about#skills" },
+    { name: "Contact", href: "/#contact" },
   ]
 
   return (
