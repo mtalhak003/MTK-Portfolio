@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowDown, ArrowUpRight, Cpu, Github, Linkedin, Mail, CalendarDays, FileText, Terminal, Zap, CircuitBoard, Radio } from "lucide-react"
+import { ArrowUpRight, Cpu, Github, Linkedin, Mail, CalendarDays, FileText, Terminal, Zap, CircuitBoard, Radio } from "lucide-react"
 import { motion } from "framer-motion"
 
 const signals = [
@@ -40,12 +40,6 @@ export function HeroSection() {
             I enjoy building dependable engineering solutions.
           </p>
           <div className="mb-9 flex flex-wrap gap-3">
-            <Link href="/#featured" className="group inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300">
-              Explore My Work <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </Link>
-            <Link href="/about#experience" className="inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-white/5 px-6 py-3 font-semibold text-white transition hover:border-cyan-300/70 hover:bg-white/10">
-              My Experience <ArrowDown className="h-4 w-4" />
-            </Link>
             <Link href="/documents/mtalha-khan-resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-slate-600 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-300/70 hover:bg-white/10"><FileText className="h-4 w-4" /> View Resume</Link>
             <a href="https://calendly.com/mtalhak9753/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/40 bg-cyan-300/10 px-5 py-3 text-sm font-semibold text-cyan-200 transition hover:border-cyan-300 hover:bg-cyan-300/20"><CalendarDays className="h-4 w-4" /> Book a Meeting <ArrowUpRight className="h-4 w-4" /></a>
           </div>
