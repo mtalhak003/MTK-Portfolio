@@ -8,7 +8,7 @@ import { AnimatedSection, AnimatedGradientBackground } from "@/components/client
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#0b1628] bg-[#070d1b]">
+    <main className="portfolio-theme min-h-screen bg-[#081121] text-slate-100">
       <Navbar />
       <header className="relative overflow-hidden bg-[#091428] px-4 pb-16 pt-32 text-white">
         <div className="container mx-auto max-w-6xl">
@@ -25,7 +25,7 @@ export default function AboutPage() {
         </div>
       </header>
       {/* About Section */}
-      <section id="about" className="py-16 px-4 bg-[#102139] bg-[#12233b] relative overflow-hidden">
+      <section id="about" className="py-16 px-4 bg-[#102139] relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
@@ -129,7 +129,7 @@ export default function AboutPage() {
       <ProjectCatalog />
 
       {/* Skills Section */}
-      <section id="skills" className="py-16 px-4 bg-[#0b1628] bg-[#091426] relative">
+      <section id="skills" className="py-16 px-4 bg-[#091426] relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
@@ -140,7 +140,7 @@ export default function AboutPage() {
               <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/90 bg-[#12233b]/80 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-purple-900 flex items-center justify-center mr-2">
+                    <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-[#12233b] flex items-center justify-center mr-2">
                       <span className="text-cyan-300 text-cyan-200 text-sm font-bold">EMB</span>
                     </span>
                     Embedded Systems & Edge AI
@@ -148,28 +148,28 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-3">
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-purple-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       ESP32
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-purple-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Raspberry Pi
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-purple-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       SPI/I2C
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-purple-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Edge Inference
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-purple-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Sensor Integration
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-purple-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Firebase
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-purple-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       IoT Networking
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-purple-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Actuator Control
                     </Badge>
                   </div>
@@ -181,7 +181,7 @@ export default function AboutPage() {
               <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/90 bg-[#12233b]/80 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-blue-900 flex items-center justify-center mr-2">
+                    <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-[#12233b] flex items-center justify-center mr-2">
                       <span className="text-cyan-300 text-cyan-200 text-sm font-bold">AI</span>
                     </span>
                     AI & Computer Vision
@@ -189,28 +189,28 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-3">
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-blue-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       YOLOv11
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-blue-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       RF-DETR
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-blue-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       OpenCV
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-blue-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       TensorFlow
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-blue-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       PyTorch
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-blue-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       NLP
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-blue-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Object Detection
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-blue-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Model Deployment
                     </Badge>
                   </div>
@@ -224,7 +224,7 @@ export default function AboutPage() {
               <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/90 bg-[#12233b]/80 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-green-900 flex items-center justify-center mr-2">
+                    <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-[#12233b] flex items-center justify-center mr-2">
                       <span className="text-cyan-300 text-cyan-200 text-sm font-bold">WEB</span>
                     </span>
                     Web Development
@@ -232,28 +232,28 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-3">
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-green-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       JavaScript
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-green-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Next.js
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-green-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       React
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-green-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Node.js
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-green-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       REST APIs
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-green-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       HTML/CSS
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-green-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Git/GitHub
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-green-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Full-Stack Dev
                     </Badge>
                   </div>
@@ -265,7 +265,7 @@ export default function AboutPage() {
               <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#12233b]/90 bg-[#12233b]/80 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-orange-900 flex items-center justify-center mr-2">
+                    <span className="w-8 h-8 rounded-full bg-cyan-400/10 dark:bg-[#12233b] flex items-center justify-center mr-2">
                       <span className="text-cyan-300 text-cyan-200 text-sm font-bold">OPS</span>
                     </span>
                     Automation & Integration
@@ -273,28 +273,28 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-3">
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-orange-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       n8n
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-orange-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Zapier
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-orange-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Make.com
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-orange-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       LLM APIs
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-orange-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       WhatsApp Integration
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-orange-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Firebase
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-orange-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Docker
                     </Badge>
-                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-orange-900/50 transition-colors">
+                    <Badge variant="secondary" className="justify-center py-2 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/50 transition-colors">
                       Cloud Platforms
                     </Badge>
                   </div>
@@ -308,22 +308,22 @@ export default function AboutPage() {
             <div className="mt-12 text-center">
               <h3 className="text-xl font-semibold mb-6">Additional Technologies</h3>
               <div className="flex flex-wrap justify-center gap-3">
-                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#102139] dark:bg-purple-900/20 border-cyan-400/20 dark:border-purple-800 hover:bg-cyan-400/10 dark:hover:bg-purple-900/40 transition-colors">
+                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#102139] dark:bg-[#12233b]/20 border-cyan-400/20 dark:border-cyan-300/20 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/40 transition-colors">
                   Python
                 </Badge>
-                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#12233b] dark:bg-blue-900/20 border-cyan-400/20 dark:border-blue-800 hover:bg-cyan-400/10 dark:hover:bg-blue-900/40 transition-colors">
+                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#12233b] dark:bg-[#12233b]/20 border-cyan-400/20 dark:border-cyan-300/20 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/40 transition-colors">
                   C/C++
                 </Badge>
-                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#12233b] dark:bg-green-900/20 border-cyan-400/20 dark:border-green-800 hover:bg-cyan-400/10 dark:hover:bg-green-900/40 transition-colors">
+                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#12233b] dark:bg-[#12233b]/20 border-cyan-400/20 dark:border-cyan-300/20 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/40 transition-colors">
                   Hugging Face
                 </Badge>
-                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#12233b] dark:bg-yellow-900/20 border-cyan-400/20 dark:border-yellow-800 hover:bg-yellow-100 dark:hover:bg-yellow-900/40 transition-colors">
+                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#12233b] dark:bg-[#12233b]/20 border-cyan-400/20 dark:border-cyan-300/20 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/40 transition-colors">
                   MongoDB
                 </Badge>
-                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#12233b] dark:bg-red-900/20 border-cyan-400/20 dark:border-red-800 hover:bg-red-100 dark:hover:bg-red-900/40 transition-colors">
+                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#12233b] dark:bg-[#12233b]/20 border-cyan-400/20 dark:border-cyan-300/20 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/40 transition-colors">
                   PostgreSQL
                 </Badge>
-                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#12233b] dark:bg-indigo-900/20 border-cyan-400/20 dark:border-indigo-800 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 transition-colors">
+                <Badge variant="outline" className="px-4 py-2 text-sm bg-[#12233b] dark:bg-[#12233b]/20 border-cyan-400/20 dark:border-cyan-300/20 hover:bg-cyan-400/10 dark:hover:bg-[#12233b]/40 transition-colors">
                   Postman
                 </Badge>
               </div>
