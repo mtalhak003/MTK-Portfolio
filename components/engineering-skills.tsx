@@ -1,4 +1,4 @@
-import { Binary, Braces, CircuitBoard, Code2, Cpu, Layers3, TerminalSquare, Wrench } from "lucide-react"
+import { Binary, Braces, CircuitBoard, Code2, Cpu, Layers3, TerminalSquare, Wrench, BrainCircuit, Globe2, PlugZap } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 
 type SkillGroup = { title: string; icon: LucideIcon; description: string; skills: string[] }
@@ -26,7 +26,7 @@ const skillGroups: SkillGroup[] = [
     title: "Embedded",
     icon: Cpu,
     description: "Microcontrollers and hardware interfaces",
-    skills: ["ESP32", "MSP430", "Raspberry Pi Pico", "Embedded C/C++", "UART", "SPI", "I²C", "GPIO", "Timers / Interrupts"],
+    skills: ["ESP32", "MSP430", "Raspberry Pi Pico", "Raspberry Pi", "Embedded C/C++", "UART", "SPI", "I²C", "GPIO", "Timers / Interrupts", "Sensor Integration", "Edge Inference", "IoT Networking", "Actuator Control"],
   },
   {
     title: "Programming Languages",
@@ -38,7 +38,25 @@ const skillGroups: SkillGroup[] = [
     title: "Other Tools",
     icon: Wrench,
     description: "Development environments and electronics tools",
-    skills: ["Git", "Linux", "MATLAB", "PSpice", "Proteus"],
+    skills: ["Git / GitHub", "Linux", "MATLAB", "PSpice", "Proteus", "Docker", "Cloud Platforms", "Postman"],
+  },
+  {
+    title: "AI & Computer Vision",
+    icon: BrainCircuit,
+    description: "Learning models, perception, and deployment",
+    skills: ["YOLOv11", "RF-DETR", "OpenCV", "TensorFlow", "PyTorch", "NLP", "Object Detection", "Model Deployment", "Hugging Face"],
+  },
+  {
+    title: "Web Development",
+    icon: Globe2,
+    description: "Applications, interfaces, and backend services",
+    skills: ["JavaScript", "Next.js", "React", "Node.js", "REST APIs", "HTML / CSS", "Full-Stack Development"],
+  },
+  {
+    title: "Integration & Databases",
+    icon: PlugZap,
+    description: "Connected applications and practical systems integration",
+    skills: ["LLM APIs", "WhatsApp Integration", "Firebase", "MongoDB", "PostgreSQL"],
   },
 ]
 
