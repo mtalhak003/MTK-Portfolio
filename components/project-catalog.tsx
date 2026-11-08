@@ -217,7 +217,7 @@ export function ProjectCatalog() {
             </label>
           </div>
 
-          <p role="status" aria-live="polite" className="mb-5 text-sm text-slate-400 text-slate-400">Showing {Math.min(filtered.length, visibleCount)} of {filtered.length} matching projects</p>
+          <p role="status" aria-live="polite" className="mb-5 text-sm text-slate-400">Showing {Math.min(filtered.length, visibleCount)} of {filtered.length} matching projects</p>
           <div className="grid gap-6 md:grid-cols-2">
             {filtered.slice(0, visibleCount).map(project => (
               <article key={project.title} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#29425f] bg-[#0b1628] shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl border-[#29425f] bg-[#091426]">
@@ -235,7 +235,7 @@ export function ProjectCatalog() {
                   </div>
                   <p className="mb-5 leading-relaxed text-slate-300 dark:text-gray-300">{project.description}</p>
                   <div className="mb-5 mt-auto">
-                    <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400 text-slate-400">Tech stack</p>
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">Tech stack</p>
                     <div className="flex flex-wrap gap-2">
                       {project.stack.map(tech => <span key={tech} className="rounded-md bg-cyan-400/10 px-2.5 py-1 text-xs font-medium text-cyan-200 bg-[#0c2441] text-cyan-200">{tech}</span>)}
                     </div>
@@ -254,7 +254,7 @@ export function ProjectCatalog() {
                     </details>
                   )}
                   {project.github ? <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 font-semibold text-cyan-300 hover:underline text-cyan-200"><Github className="h-4 w-4" /> Explore source code <ArrowUpRight className="h-4 w-4" /></a>
-                  : <span className="text-sm text-slate-400 text-slate-400">Public source link unavailable</span>}
+                  : <span className="text-sm text-slate-400">Public source link unavailable</span>}
                 </div>
               </article>
             ))}
@@ -262,7 +262,7 @@ export function ProjectCatalog() {
           {filtered.length === 0 && <div className="rounded-2xl border border-dashed border-[#36516c] py-12 text-center border-[#36516c]"><Search className="mx-auto mb-3 h-6 w-6 text-slate-400" /><p className="mb-3 text-slate-400">No matching projects found.</p><button className="font-semibold text-cyan-300 text-cyan-200" onClick={clearFilters}>Clear filters</button></div>}
           {filtered.length > visibleCount && <div className="mt-10 text-center"><button onClick={() => setVisibleCount(n => n + 8)} className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-7 py-3 font-semibold text-[#081121] transition-colors hover:bg-cyan-300">Load more projects <ArrowRight className="h-4 w-4" /></button></div>}
         </div>
-        <p className="mt-10 text-center text-sm text-slate-400 text-slate-400">Descriptions and technology labels are based on available project documentation. Technical details can be expanded as repositories are updated.</p>
+        <p className="mt-10 text-center text-sm text-slate-400">Descriptions and technology labels are based on available project documentation. Technical details can be expanded as repositories are updated.</p>
       </div>
     </section>
   )
