@@ -55,7 +55,7 @@ export function Navbar() {
           >
             <Link
               href="/"
-              className={`text-xl font-bold ${"bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent"}`}
+              className="text-xl font-bold bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent"
             >
               Muhammad Talha Khan
             </Link>
@@ -78,7 +78,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`px-3 py-2 text-sm font-medium transition-colors relative group hover:text-cyan-400 ${"text-slate-200"}`}
+                    className="px-3 py-2 text-sm font-medium transition-colors relative group text-slate-200 hover:text-cyan-300"
                   >
                     {link.name}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-300 group-hover:w-full transition-all duration-300"></span>
@@ -112,7 +112,7 @@ export function Navbar() {
             <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className={`inline-flex items-center justify-center p-2 rounded-md hover:text-cyan-400 focus:outline-none ${"text-white"}`}
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-cyan-300 focus:outline-none"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
