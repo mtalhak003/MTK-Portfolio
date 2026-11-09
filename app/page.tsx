@@ -1,3 +1,5 @@
+import { PortfolioFooter } from "@/components/portfolio-footer"
+import { HomeCollaborate } from "@/components/home-collaborate"
 import { Github, Linkedin, Mail, CalendarDays, ArrowUpRight, FileText } from "lucide-react"
 import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
@@ -103,42 +105,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 bg-[#070d1b] text-white relative">
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h2 className="text-xl font-bold">Muhammad Talha Khan</h2>
-              <p className="text-slate-400">Embedded Systems & Firmware Engineer</p>
-            </div>
-            <div className="flex space-x-4">
-              <Link
-                href="https://linkedin.com/in/muhammad-talha-khan-730b783aa"
-                target="_blank"
-                className="text-slate-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
-              >
-                <Linkedin className="w-5 h-5" />
-              </Link>
-              <Link
-                href="https://github.com/mtalhak003"
-                target="_blank"
-                className="text-slate-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
-              >
-                <Github className="w-5 h-5" />
-              </Link>
-              <Link
-                href="mailto:mtalhak9753@gmail.com"
-                className="text-slate-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
-              >
-                <Mail className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-          <div className="mt-6 text-center text-slate-400 text-sm">
-            <p>© {new Date().getFullYear()} Muhammad Talha Khan. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <HomeCollaborate />
+      <PortfolioFooter />
 
     </div>
   )
