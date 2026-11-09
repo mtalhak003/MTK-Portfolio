@@ -1,3 +1,4 @@
+import { PortfolioFooter } from "@/components/portfolio-footer"
 import Link from "next/link"
 import { ArrowLeft, ArrowUpRight, Cpu, CircuitBoard } from "lucide-react"
 import { Navbar } from "@/components/navbar"
@@ -25,7 +26,7 @@ export default function WorkPage() {
         </div>
       </header>
       <ProjectCatalog />
-      <footer className="border-t border-cyan-300/15 bg-[#070d1b] px-4 py-8 text-center text-sm text-slate-400">© {new Date().getFullYear()} Muhammad Talha Khan · <Link className="text-cyan-300 hover:underline" href="/about">About & Experience</Link></footer>
+      <PortfolioFooter />
     </main>
   )
 }
