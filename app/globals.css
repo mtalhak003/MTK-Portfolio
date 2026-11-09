@@ -197,3 +197,14 @@ html:not(.dark) .portfolio-theme .bg-gradient-to-r.from-cyan-300 {
   --tw-gradient-to: rgb(8 126 152 / 0) var(--tw-gradient-to-position) !important;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
 }
+
+/* Transparent navy overlays and navigation also follow the selected mode. */
+html:not(.dark) .portfolio-theme [class~="bg-[#091426]/95"],
+html:not(.dark) .portfolio-theme [class~="bg-[#091426]/70"],
+html:not(.dark) .portfolio-theme [class~="bg-[#12233b]/95"],
+html:not(.dark) .portfolio-theme [class~="bg-[#12233b]/80"],
+html:not(.dark) .portfolio-theme [class~="bg-[#121f35]/90"],
+html:not(.dark) .portfolio-theme [class~="bg-[#101b30]/85"],
+html:not(.dark) .portfolio-theme [class~="bg-[#101b30]/95"] {
+  background-color: rgba(249, 252, 255, .94) !important;
+}
