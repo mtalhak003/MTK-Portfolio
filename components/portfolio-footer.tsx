@@ -6,7 +6,7 @@ const navigation = [
   { label: "About", href: "/about" },
   { label: "Work", href: "/work" },
   { label: "Publications", href: "/publications" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ]
 
 const expertise = [
