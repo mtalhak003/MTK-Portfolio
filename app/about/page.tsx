@@ -1,3 +1,4 @@
+import { PortfolioFooter } from "@/components/portfolio-footer"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { EngineeringSkills } from "@/components/engineering-skills"
@@ -134,10 +135,7 @@ export default function AboutPage() {
 
       <EngineeringSkills />
 
-      <footer className="bg-[#091428] px-4 py-8 text-center text-sm text-slate-300">
-        <p>© {new Date().getFullYear()} Muhammad Talha Khan</p>
-        <Link className="mt-2 inline-block text-cyan-300 hover:underline" href="/">Back to homepage</Link>
-      </footer>
+      <PortfolioFooter />
     </main>
   )
 }
