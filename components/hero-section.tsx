@@ -33,9 +33,16 @@ export function HeroSection() {
             <a href="https://calendly.com/mtalhak9753/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"><CalendarDays className="h-4 w-4" /> Book a Meeting <ArrowUpRight className="h-4 w-4" /></a>
             <Link href="/documents/mtalha-khan-resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/40 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-300 hover:bg-white/10"><FileText className="h-4 w-4" /> View Resume</Link>
           </div>
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-cyan-300/15 pt-5">
-            <div className="flex items-baseline gap-2"><span className="text-2xl font-bold tracking-tight text-cyan-300">1+</span><span className="text-sm font-medium text-slate-300">Year Experience</span></div>
-            <div className="flex items-baseline gap-2"><span className="text-2xl font-bold tracking-tight text-cyan-300">35+</span><span className="text-sm font-medium text-slate-300">Projects Done</span></div>
+          <div className="relative grid max-w-[530px] grid-cols-2 overflow-hidden rounded-2xl border border-cyan-300/20 bg-gradient-to-br from-[#142841]/95 via-[#102039]/95 to-[#0d192e]/95 p-4 shadow-[0_12px_38px_rgba(0,0,0,.28)] sm:p-5" aria-label="Experience and project statistics">
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/55 to-transparent" aria-hidden="true" />
+            <div className="flex flex-col items-center justify-center gap-1 px-2 text-center sm:px-4">
+              <span className="text-3xl font-extrabold tracking-tight text-cyan-300 sm:text-4xl">1+</span>
+              <span className="text-xs font-medium tracking-wide text-slate-200 sm:text-sm">Year Experience</span>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-1 border-l border-cyan-300/25 px-2 text-center sm:px-4">
+              <span className="text-3xl font-extrabold tracking-tight text-cyan-300 sm:text-4xl">35+</span>
+              <span className="text-xs font-medium tracking-wide text-slate-200 sm:text-sm">Projects Done</span>
+            </div>
           </div>
         </motion.div>
 
