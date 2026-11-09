@@ -49,7 +49,7 @@ export function PortfolioFooter() {
             <ul className="space-y-3 text-sm leading-6 text-slate-400">{expertise.map(item => <li key={item}>{item}</li>)}</ul>
           </div>
           <div>
-            <h3 className="mb-5 font-mono text-xs font-bold uppercase tracking-[.16em] text-cyan-300">Get In Touch</h3>
+            <h3 className="mb-5 font-mono text-xs font-bold uppercase tracking-[.16em] text-cyan-300">Connect</h3>
             <p className="mb-4 text-sm leading-7 text-slate-400">Have an embedded systems challenge, research opportunity, or software project? Let's talk.</p>
             <a className="mb-5 inline-block break-all font-mono text-sm text-cyan-300 transition hover:text-cyan-200" href="mailto:mtalhak9753@gmail.com">mtalhak9753@gmail.com</a>
             <a href="https://calendly.com/mtalhak9753/30min" target="_blank" rel="noopener noreferrer" className="flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-400 px-4 py-3 font-semibold text-[#06121c] transition hover:bg-cyan-300"><CalendarDays className="h-4 w-4" /> Book 1:1 Discussion <ArrowUpRight className="h-4 w-4" /></a>
