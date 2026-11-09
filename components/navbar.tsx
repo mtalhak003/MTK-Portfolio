@@ -33,7 +33,7 @@ export function Navbar() {
     { name: "About", href: "/about" },
     { name: "Work", href: "/work" },
     { name: "Publications", href: "/publications" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Contact", href: "/contact" },
   ]
 
   return (
