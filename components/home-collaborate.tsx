@@ -14,7 +14,7 @@ export function HomeCollaborate() {
               <p className="max-w-[630px] text-base leading-7 text-slate-400">Whether you need embedded firmware, FPGA and digital design, IoT systems, edge AI, or a custom web application, feel free to get in touch.</p>
             </div>
             <div className="flex shrink-0 flex-wrap gap-3 lg:justify-end">
-              <Link href="/#contact" className="inline-flex min-w-[156px] items-center justify-center gap-2 rounded-xl bg-cyan-400 px-6 py-3.5 font-semibold text-[#06121c] transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"><Mail className="h-4 w-4" /> Send Message</Link>
+              <Link href="/contact" className="inline-flex min-w-[156px] items-center justify-center gap-2 rounded-xl bg-cyan-400 px-6 py-3.5 font-semibold text-[#06121c] transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"><Mail className="h-4 w-4" /> Send Message</Link>
               <a href="https://calendly.com/mtalhak9753/30min" target="_blank" rel="noopener noreferrer" className="inline-flex min-w-[168px] items-center justify-center gap-2 rounded-xl border border-slate-500/20 bg-[#263142] px-6 py-3.5 font-semibold text-slate-200 transition hover:border-cyan-300/40 hover:bg-[#303d50]"><CalendarDays className="h-4 w-4" /> Schedule Call <ArrowUpRight className="h-4 w-4" /></a>
             </div>
           </div>
