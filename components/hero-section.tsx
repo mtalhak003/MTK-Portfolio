@@ -43,10 +43,10 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, scale: .94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, delay: .15 }}
-          className="relative mx-auto w-full max-w-[460px]" aria-label="Portrait of Muhammad Talha Khan">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-cyan-300/30 bg-[#07182b] shadow-[0_0_100px_rgba(34,211,238,.12)]">
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-300/10 via-transparent to-[#070d1b]/20" aria-hidden="true" />
+        <motion.div initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, delay: .15 }}
+          className="relative mx-auto w-full max-w-[450px] pt-4 lg:pt-0" aria-label="Portrait of Muhammad Talha Khan">
+          <div className="pointer-events-none absolute inset-x-[12%] top-[14%] h-[55%] rounded-full bg-cyan-500/10 blur-[90px]" aria-hidden="true" />
+          <div className="relative mx-auto w-full max-w-[410px]">
             <img
               src="/images/talha-studio.svg"
               alt="Muhammad Talha Khan in a white outfit against a dark blue studio background"
@@ -54,11 +54,14 @@ export function HeroSection() {
               height={760}
               loading="eager"
               decoding="async"
-              className="h-full w-full object-cover object-top"
+              className="relative block h-auto w-full"
+              style={{
+                maskImage: "radial-gradient(ellipse 75% 76% at 50% 46%, black 57%, transparent 100%)",
+                WebkitMaskImage: "radial-gradient(ellipse 75% 76% at 50% 46%, black 57%, transparent 100%)",
+              }}
             />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#070d1b]/70 to-transparent" aria-hidden="true" />
           </div>
-          <div className="absolute -bottom-5 left-4 right-4 grid grid-cols-3 gap-2 rounded-xl border border-white/10 bg-[#101b30]/95 p-3 text-center shadow-2xl backdrop-blur sm:left-8 sm:right-8 sm:p-4">
+          <div className="relative z-10 mx-auto -mt-8 grid max-w-[405px] grid-cols-3 gap-2 rounded-xl border border-cyan-300/15 bg-[#101b30]/85 p-3 text-center shadow-[0_15px_40px_rgba(0,0,0,.3)] backdrop-blur-md sm:-mt-12 sm:p-4">
             <div><CircuitBoard className="mx-auto mb-1 h-5 w-5 text-cyan-300" /><span className="text-[11px] text-slate-300 sm:text-xs">Firmware</span></div>
             <div><Radio className="mx-auto mb-1 h-5 w-5 text-violet-300" /><span className="text-[11px] text-slate-300 sm:text-xs">IoT Systems</span></div>
             <div><Zap className="mx-auto mb-1 h-5 w-5 text-emerald-300" /><span className="text-[11px] text-slate-300 sm:text-xs">Edge AI</span></div>
