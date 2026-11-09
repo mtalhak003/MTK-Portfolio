@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowUpRight, Github, Linkedin, Mail, CalendarDays, FileText, Terminal, Zap, CircuitBoard, Radio } from "lucide-react"
+import { ArrowUpRight, Github, Linkedin, Mail, CalendarDays, FileText, Zap, CircuitBoard, Radio } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function HeroSection() {
@@ -16,7 +16,6 @@ export function HeroSection() {
           <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/5 px-4 py-2 text-xs font-semibold uppercase tracking-[.2em] text-cyan-300">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" /> Embedded systems · Firmware · Edge AI
           </div>
-          <p className="mb-4 font-mono text-sm text-slate-400"><span className="text-emerald-400">&gt;</span> initialize_engineer_profile()</p>
           <h1 className="mb-5 text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
             Hi, I&apos;m <span className="bg-gradient-to-r from-cyan-300 via-sky-400 to-violet-400 bg-clip-text text-transparent">Muhammad<br className="hidden sm:block" /> Talha Khan.</span>
           </h1>
@@ -65,7 +64,6 @@ export function HeroSection() {
           </div>
         </motion.div>
       </div>
-      <div className="pointer-events-none absolute bottom-3 left-1/2 hidden -translate-x-1/2 items-center gap-2 font-mono text-xs tracking-[.2em] text-slate-500 md:flex" aria-hidden="true"><Terminal className="h-4 w-4" /> SCROLL TO EXPLORE</div>
     </section>
   )
 }
