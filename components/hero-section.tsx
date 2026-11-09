@@ -13,9 +13,6 @@ export function HeroSection() {
       <div className="pointer-events-none absolute -left-24 bottom-0 h-[350px] w-[400px] rounded-full bg-violet-600/10 blur-[90px]" aria-hidden="true" />
       <div className="container relative z-10 mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_.9fr] lg:gap-6">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }}>
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/5 px-4 py-2 text-xs font-semibold uppercase tracking-[.2em] text-cyan-300">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" /> Embedded systems · Firmware · Edge AI
-          </div>
           <h1 className="mb-5 text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
             Hi, I&apos;m <span className="bg-gradient-to-r from-cyan-300 via-sky-400 to-violet-400 bg-clip-text text-transparent">Muhammad<br className="hidden sm:block" /> Talha Khan.</span>
           </h1>
