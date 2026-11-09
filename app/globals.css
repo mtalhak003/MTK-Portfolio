@@ -244,6 +244,5 @@ html.light .portfolio-theme :is([class*="border-cyan-300"],[class*="border-white
 html.light .portfolio-theme :is(input, textarea, select) {
   background-color: #fff !important; color: #152b42 !important; border-color: #b8d2e3 !important;
 }
-html.light .portfolio-theme .bg-cyan-400,
-html.light .portfolio-theme .hover\\:bg-cyan-300:hover { background-color: #22d3ee !important; }
+html.light .portfolio-theme .bg-cyan-400 { background-color: #22d3ee !important; }
 html.light .portfolio-theme .bg-cyan-400 :is(span,svg) { color: #06121c !important; }
