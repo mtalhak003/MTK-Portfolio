@@ -47,10 +47,10 @@ export function HeroSection() {
           <div className="pointer-events-none absolute inset-x-[12%] top-[14%] h-[55%] rounded-full bg-cyan-500/10 blur-[90px]" aria-hidden="true" />
           <div className="relative mx-auto w-full max-w-[440px]">
             <img
-              src="/images/talha-cutout.svg"
+              src="/images/talha-hero-4k.webp"
               alt="Muhammad Talha Khan standing in a white outfit"
-              width={650}
-              height={867}
+              width={3072}
+              height={4096}
               loading="eager"
               decoding="async"
               fetchPriority="high"
