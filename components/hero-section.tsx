@@ -44,21 +44,18 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, delay: .15 }}
-          className="relative mx-auto w-full max-w-[450px] pt-4 lg:pt-0" aria-label="Portrait of Muhammad Talha Khan">
+          className="relative mx-auto w-full max-w-[480px] pt-4 lg:pt-0" aria-label="Portrait of Muhammad Talha Khan">
           <div className="pointer-events-none absolute inset-x-[12%] top-[14%] h-[55%] rounded-full bg-cyan-500/10 blur-[90px]" aria-hidden="true" />
-          <div className="relative mx-auto w-full max-w-[410px]">
+          <div className="relative mx-auto w-full max-w-[440px]">
             <img
-              src="/images/talha-studio.svg"
-              alt="Muhammad Talha Khan in a white outfit against a dark blue studio background"
-              width={520}
-              height={760}
+              src="/images/talha-cutout.svg"
+              alt="Muhammad Talha Khan standing in a white outfit"
+              width={650}
+              height={867}
               loading="eager"
               decoding="async"
-              className="relative block h-auto w-full"
-              style={{
-                maskImage: "radial-gradient(ellipse 75% 76% at 50% 46%, black 57%, transparent 100%)",
-                WebkitMaskImage: "radial-gradient(ellipse 75% 76% at 50% 46%, black 57%, transparent 100%)",
-              }}
+              fetchPriority="high"
+              className="relative block h-auto w-full select-none object-contain"
             />
           </div>
           <div className="relative z-10 mx-auto -mt-8 grid max-w-[405px] grid-cols-3 gap-2 rounded-xl border border-cyan-300/15 bg-[#101b30]/85 p-3 text-center shadow-[0_15px_40px_rgba(0,0,0,.3)] backdrop-blur-md sm:-mt-12 sm:p-4">
