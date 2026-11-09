@@ -208,3 +208,42 @@ html:not(.dark) .portfolio-theme [class~="bg-[#101b30]/85"],
 html:not(.dark) .portfolio-theme [class~="bg-[#101b30]/95"] {
   background-color: rgba(249, 252, 255, .94) !important;
 }
+
+
+/* Explicit light-mode fallback: handle opacity variants and animated hero surfaces.
+   next-themes sets .light on html; the default dark design remains untouched. */
+html.light, html.light body { color-scheme: light; background-color: #f5f9fe; }
+html.light .portfolio-theme { background-color: #f5f9fe !important; color: #18334c !important; }
+html.light .portfolio-theme :is(
+  [class*="bg-[#070d1b]"], [class*="bg-[#081121]"],
+  [class*="bg-[#091426]"], [class*="bg-[#091428]"],
+  [class*="bg-[#0b1325]"], [class*="bg-[#0b1a2e]"],
+  [class*="bg-[#0d1930]"], [class*="bg-[#102139]"],
+  [class*="bg-[#121e32]"], [class*="bg-[#121f35]"],
+  [class*="bg-[#12233b]"], [class*="bg-[#142741]"],
+  [class*="bg-[#101b30]"]
+) { background-color: #f6faff !important; }
+html.light .portfolio-theme :is(
+  [class*="from-[#101d35]"], [class*="from-[#192332]"],
+  [class*="from-[#142841]"], [class*="from-[#0b1a2e]"]
+) { --tw-gradient-from: #e4eef9 var(--tw-gradient-from-position) !important; --tw-gradient-to: rgb(228 238 249 / 0) var(--tw-gradient-to-position) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+html.light .portfolio-theme :is([class*="via-[#111a27]"],[class*="via-[#102039]"]) {
+  --tw-gradient-to: rgb(244 249 254 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #f4f9fe var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+}
+html.light .portfolio-theme :is([class*="to-[#080e18]"],[class*="to-[#0d192e]"]) {
+  --tw-gradient-to: #fff var(--tw-gradient-to-position) !important;
+}
+html.light .portfolio-theme nav { border-color: rgba(13, 103, 142, .16); }
+html.light .portfolio-theme :is(.text-slate-100, .text-white) { color: #18334c !important; }
+html.light .portfolio-theme .text-slate-200 { color: #263e57 !important; }
+html.light .portfolio-theme .text-slate-300 { color: #4b6077 !important; }
+html.light .portfolio-theme .text-slate-400 { color: #64748b !important; }
+html.light .portfolio-theme .text-cyan-300 { color: #087e98 !important; }
+html.light .portfolio-theme :is([class*="border-cyan-300"],[class*="border-white/10"]) { border-color: rgba(22, 114, 151, .22) !important; }
+html.light .portfolio-theme :is(input, textarea, select) {
+  background-color: #fff !important; color: #152b42 !important; border-color: #b8d2e3 !important;
+}
+html.light .portfolio-theme .bg-cyan-400,
+html.light .portfolio-theme .hover\\:bg-cyan-300:hover { background-color: #22d3ee !important; }
+html.light .portfolio-theme .bg-cyan-400 :is(span,svg) { color: #06121c !important; }
